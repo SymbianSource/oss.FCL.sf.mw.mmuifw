@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Includes all the Domain API specific bld.inf files, which 
+*                export files.
+*
+*/
+
+
+
+#include "../alf_widgetfactory_api/group/bld.inf"
+#include "../alf_widgetutils_api/group/bld.inf"
+#include "../alf_widgetmodel_api/group/bld.inf"
+#include "../osn_container_api/group/bld.inf"
+#include "../osn_global_api/group/bld.inf"
+#include "../osn_string_api/group/bld.inf"
+
+//resource pool
+#include "../alf_resourcepool_api/group/bld.inf"
+
+// widget APIs
+#include "../alf_containerwidget_api/group/bld.inf"
+#include "../alf_viewwidget_api/group/bld.inf"
+#include "../alf_scrollbarwidget_api/group/bld.inf"
+
+#include "../alf_customlayoutmanagers_api/group/bld.inf"
+
+// gesture helper Api's
+#include "../gesturehelper_api/group/bld.inf"
+
+// MUL headers
+#include "../mul_coverflowwidget_api/group/bld.inf"
+#include "../mul_datamodel_api/group/bld.inf"
+#include "../mul_sliderwidget_api/group/bld.inf"
+#include "../mul_widget_api/group/bld.inf"
+

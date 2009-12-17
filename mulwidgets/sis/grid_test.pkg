@@ -1,0 +1,84 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: ;Language - standard language definitions
+;
+&EN
+
+; standard SIS file header
+#{"GridTest"},(0x048C0995),1,0,0
+
+;Supports Series 60 v 3.0
+[0x1028315F], 0, 0, 0, {"Series60ProductID"}
+
+;Localized Vendor Name
+%{"Nokia"}
+
+;Unique Vendor name
+:"Nokia"
+
+; Files to copy
+
+;=============================
+;TestMulGridWidget 
+;=============================
+"\epoc32\release\armv5\urel\testgridwidget.exe"-"!:\sys\bin\testgridwidget.exe"
+"\epoc32\data\z\private\10003a3f\import\apps\TestGridWidget_reg.rsc"-"!:\private\10003a3f\import\apps\TestGridWidget_reg.rsc"
+"\epoc32\data\z\resource\apps\TestGridWidget_loc.RSc"-"!:\resource\apps\TestGridWidget_loc.RSc"
+"\epoc32\data\z\resource\apps\testgridwidget.RSc"-"!:\resource\apps\testgridwidget.RSc"
+
+
+;=============================
+;Images for grid widget
+;=============================
+
+"\epoc32\WINSCW\C\dataimage\grid\i01.png"    -"c:\dataimage\grid\i01.png"
+"\epoc32\WINSCW\C\dataimage\grid\i02.png"    -"c:\dataimage\grid\i02.png"
+"\epoc32\WINSCW\C\dataimage\grid\i03.png"    -"c:\dataimage\grid\i03.png"
+"\epoc32\WINSCW\C\dataimage\grid\i04.png"    -"c:\dataimage\grid\i04.png"
+"\epoc32\WINSCW\C\dataimage\grid\i05.png"    -"c:\dataimage\grid\i05.png"
+"\epoc32\WINSCW\C\dataimage\grid\i06.png"    -"c:\dataimage\grid\i06.png"
+"\epoc32\WINSCW\C\dataimage\grid\i07.png"    -"c:\dataimage\grid\i07.png"
+"\epoc32\WINSCW\C\dataimage\grid\i08.png"    -"c:\dataimage\grid\i08.png"
+"\epoc32\WINSCW\C\dataimage\grid\i09.png"    -"c:\dataimage\grid\i09.png"
+"\epoc32\WINSCW\C\dataimage\grid\i10.png"    -"c:\dataimage\grid\i10.png"
+"\epoc32\WINSCW\C\dataimage\grid\i11.png"    -"c:\dataimage\grid\i11.png"
+"\epoc32\WINSCW\C\dataimage\grid\i12.png"    -"c:\dataimage\grid\i12.png"
+"\epoc32\WINSCW\C\dataimage\grid\i13.png"    -"c:\dataimage\grid\i13.png"
+"\epoc32\WINSCW\C\dataimage\grid\i14.png"    -"c:\dataimage\grid\i14.png"
+"\epoc32\WINSCW\C\dataimage\grid\i15.png"    -"c:\dataimage\grid\i15.png"
+"\epoc32\WINSCW\C\dataimage\grid\i16.png"    -"c:\dataimage\grid\i16.png"
+"\epoc32\WINSCW\C\dataimage\grid\i17.png"    -"c:\dataimage\grid\i17.png"
+"\epoc32\WINSCW\C\dataimage\grid\i18.png"    -"c:\dataimage\grid\i18.png"
+"\epoc32\WINSCW\C\dataimage\grid\i19.png"    -"c:\dataimage\grid\i19.png"
+"\epoc32\WINSCW\C\dataimage\grid\i20.png"    -"c:\dataimage\grid\i20.png"
+"\epoc32\WINSCW\C\dataimage\grid\i21.png"    -"c:\dataimage\grid\i21.png"
+"\epoc32\WINSCW\C\dataimage\grid\i22.png"    -"c:\dataimage\grid\i22.png"
+"\epoc32\WINSCW\C\dataimage\grid\i23.png"    -"c:\dataimage\grid\i23.png"
+"\epoc32\WINSCW\C\dataimage\grid\i24.png"    -"c:\dataimage\grid\i24.png"
+"\epoc32\WINSCW\C\dataimage\grid\i25.png"    -"c:\dataimage\grid\i25.png"
+"\epoc32\WINSCW\C\dataimage\grid\i26.png"    -"c:\dataimage\grid\i26.png"
+"\epoc32\WINSCW\C\dataimage\grid\i27.png"    -"c:\dataimage\grid\i27.png"
+"\epoc32\WINSCW\C\dataimage\grid\i28.png"    -"c:\dataimage\grid\i28.png"
+"\epoc32\WINSCW\C\dataimage\grid\i29.png"    -"c:\dataimage\grid\i29.png"
+"\epoc32\WINSCW\C\dataimage\grid\i30.png"    -"c:\dataimage\grid\i30.png"
+
+"\epoc32\WINSCW\C\dataimage\grid\bmp.bmp"    -"c:\dataimage\grid\bmp.bmp"
+"\epoc32\WINSCW\C\dataimage\grid\gif.gif"    -"c:\dataimage\grid\gif.gif"
+"\epoc32\WINSCW\C\dataimage\grid\ci01.jpg"   -"c:\dataimage\grid\ci01.jpg"
+"\epoc32\WINSCW\C\dataimage\grid\jpeg.jpg"   -"c:\dataimage\grid\jpeg.jpg"
+"\epoc32\WINSCW\C\dataimage\grid\svg.svg"    -"c:\dataimage\grid\svg.svg"
+"\epoc32\WINSCW\C\dataimage\grid\play.png" -"c:\dataimage\grid\play.png"
+"\epoc32\WINSCW\C\dataimage\grid\stop.png" -"c:\dataimage\grid\stop.png"
+"\epoc32\WINSCW\C\dataimage\grid\empty.png" -"c:\dataimage\grid\empty.png"
+"\epoc32\WINSCW\C\dataimage\grid\matrix_stripes.png" -"c:\dataimage\grid\matrix_stripes.png"

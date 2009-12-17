@@ -1,0 +1,49 @@
+EXPORTS
+	??4UString@osncore@@QAEAAV01@ABV01@@Z @ 1 NONAME ; class osncore::UString & osncore::UString::operator=(class osncore::UString const &)
+	??8UString@osncore@@QBE_NABV01@@Z @ 2 NONAME ; bool osncore::UString::operator==(class osncore::UString const &) const
+	??0AlfPtrVectorImpl@osncore@@QAE@IAAVIDeleter@1@@Z @ 3 NONAME ; osncore::AlfPtrVectorImpl::AlfPtrVectorImpl(unsigned int, class osncore::IDeleter &)
+	?remove@AlfPtrVectorImpl@osncore@@QAE_NI_N@Z @ 4 NONAME ; bool osncore::AlfPtrVectorImpl::remove(unsigned int, bool)
+	?append@UString@osncore@@QAEXPBD@Z @ 5 NONAME ; void osncore::UString::append(char const *)
+	??AUString@osncore@@QAEKJ@Z @ 6 NONAME ; unsigned long osncore::UString::operator[](long)
+	?getByteLength@UString@osncore@@QBEJXZ @ 7 NONAME ; long osncore::UString::getByteLength(void) const
+	??0UString@osncore@@QAE@PBDH@Z @ 8 NONAME ; osncore::UString::UString(char const *, int)
+	?toInt@osncore@@YAHABVUString@1@@Z @ 9 NONAME ; int osncore::toInt(class osncore::UString const &)
+	??_V@YAXPAXW4newarg@@@Z @ 10 NONAME ; void operator delete[](void *, enum newarg)
+	?insert@UString@osncore@@QAEXJPBDJ@Z @ 11 NONAME ; void osncore::UString::insert(long, char const *, long)
+	??0UString@osncore@@QAE@PBD@Z @ 12 NONAME ; osncore::UString::UString(char const *)
+	?normalizeNFD@osncore@@YA?AV?$auto_ptr@VUString@osncore@@@std@@ABVUString@1@@Z @ 13 NONAME ; class std::auto_ptr<class osncore::UString> osncore::normalizeNFD(class osncore::UString const &)
+	?erase@UString@osncore@@QAEXJJ@Z @ 14 NONAME ; void osncore::UString::erase(long, long)
+	??8UString@osncore@@QBE_NPBD@Z @ 15 NONAME ; bool osncore::UString::operator==(char const *) const
+	?what@InvalidUtf8@UString@osncore@@UBEPBDXZ @ 16 NONAME ; char const * osncore::UString::InvalidUtf8::what(void) const
+	??0UString@osncore@@QAE@K@Z @ 17 NONAME ; osncore::UString::UString(unsigned long)
+	??_U@YAPAXIW4newarg@@@Z @ 18 NONAME ; void * operator new[](unsigned int, enum newarg)
+	?replace@UString@osncore@@QAEXJPBDJ@Z @ 19 NONAME ; void osncore::UString::replace(long, char const *, long)
+	?compare@UString@osncore@@QBEHABV12@@Z @ 20 NONAME ; int osncore::UString::compare(class osncore::UString const &) const
+	??1?$UtfProxy@G@osncore@@QAE@XZ @ 21 NONAME ; osncore::UtfProxy<unsigned short>::~UtfProxy<unsigned short>(void)
+	?clear@AlfPtrVectorImpl@osncore@@QAEX_N@Z @ 22 NONAME ; void osncore::AlfPtrVectorImpl::clear(bool)
+	?normalizeNFKD@osncore@@YA?AV?$auto_ptr@VUString@osncore@@@std@@ABVUString@1@@Z @ 23 NONAME ; class std::auto_ptr<class osncore::UString> osncore::normalizeNFKD(class osncore::UString const &)
+	??0UString@osncore@@QAE@ABV01@@Z @ 24 NONAME ; osncore::UString::UString(class osncore::UString const &)
+	??4UString@osncore@@QAEAAV01@PBD@Z @ 25 NONAME ; class osncore::UString & osncore::UString::operator=(char const *)
+	?append@UString@osncore@@QAEXABV12@@Z @ 26 NONAME ; void osncore::UString::append(class osncore::UString const &)
+	?getUtf8@UString@osncore@@QBEPBDXZ @ 27 NONAME ; char const * osncore::UString::getUtf8(void) const
+	??3@YAXPAXW4newarg@@@Z @ 28 NONAME ; void operator delete(void *, enum newarg)
+	?resize@AlfPtrVectorImpl@osncore@@QAE_NI_N@Z @ 29 NONAME ; bool osncore::AlfPtrVectorImpl::resize(unsigned int, bool)
+	?replace@UString@osncore@@QAEXJPBD@Z @ 30 NONAME ; void osncore::UString::replace(long, char const *)
+	?findRef@AlfPtrVectorImpl@osncore@@QAEHPAX@Z @ 31 NONAME ; int osncore::AlfPtrVectorImpl::findRef(void *)
+	?insert@UString@osncore@@QAEXJPBD@Z @ 32 NONAME ; void osncore::UString::insert(long, char const *)
+	??1UString@osncore@@UAE@XZ @ 33 NONAME ; osncore::UString::~UString(void)
+	?toUtf16@osncore@@YA?AV?$auto_ptr@V?$UtfProxy@G@osncore@@@std@@ABVUString@1@@Z @ 34 NONAME ; class std::auto_ptr<class osncore::UtfProxy<unsigned short> > osncore::toUtf16(class osncore::UString const &)
+	??2@YAPAXIW4newarg@@@Z @ 35 NONAME ; void * operator new(unsigned int, enum newarg)
+	?getCharLength@UString@osncore@@QBEJXZ @ 36 NONAME ; long osncore::UString::getCharLength(void) const
+	?insert@AlfPtrVectorImpl@osncore@@QAE_NIPAX_N@Z @ 37 NONAME ; bool osncore::AlfPtrVectorImpl::insert(unsigned int, void *, bool)
+	?isEmpty@UString@osncore@@QBE_NXZ @ 38 NONAME ; bool osncore::UString::isEmpty(void) const
+	?normalizeNFC@osncore@@YA?AV?$auto_ptr@VUString@osncore@@@std@@ABVUString@1@@Z @ 39 NONAME ; class std::auto_ptr<class osncore::UString> osncore::normalizeNFC(class osncore::UString const &)
+	?isNull@UString@osncore@@QBE_NXZ @ 40 NONAME ; bool osncore::UString::isNull(void) const
+	??0UString@osncore@@QAE@XZ @ 41 NONAME ; osncore::UString::UString(void)
+	?compareC@UString@osncore@@QBEHPBD@Z @ 42 NONAME ; int osncore::UString::compareC(char const *) const
+	?normalizeNFKC@osncore@@YA?AV?$auto_ptr@VUString@osncore@@@std@@ABVUString@1@@Z @ 43 NONAME ; class std::auto_ptr<class osncore::UString> osncore::normalizeNFKC(class osncore::UString const &)
+	??1AlfPtrVectorImpl@osncore@@QAE@XZ @ 44 NONAME ; osncore::AlfPtrVectorImpl::~AlfPtrVectorImpl(void)
+	??0AlfPtrVectorImpl@osncore@@QAE@AAVIDeleter@1@@Z @ 45 NONAME ; osncore::AlfPtrVectorImpl::AlfPtrVectorImpl(class osncore::IDeleter &)
+	?compareC@UString@osncore@@QBEHABV12@@Z @ 46 NONAME ; int osncore::UString::compareC(class osncore::UString const &) const
+	?compare@UString@osncore@@QBEHPBD@Z @ 47 NONAME ; int osncore::UString::compare(char const *) const
+

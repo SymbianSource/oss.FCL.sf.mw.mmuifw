@@ -1,0 +1,64 @@
+EXPORTS
+	_ZN7osncore12normalizeNFCERKNS_7UStringE @ 1 NONAME
+	_ZN7osncore12normalizeNFDERKNS_7UStringE @ 2 NONAME
+	_ZN7osncore13normalizeNFKCERKNS_7UStringE @ 3 NONAME
+	_ZN7osncore13normalizeNFKDERKNS_7UStringE @ 4 NONAME
+	_ZN7osncore16AlfPtrVectorImpl5clearEb @ 5 NONAME
+	_ZN7osncore16AlfPtrVectorImpl6insertEjPvb @ 6 NONAME
+	_ZN7osncore16AlfPtrVectorImpl6removeEjb @ 7 NONAME
+	_ZN7osncore16AlfPtrVectorImpl6resizeEjb @ 8 NONAME
+	_ZN7osncore16AlfPtrVectorImpl7findRefEPv @ 9 NONAME
+	_ZN7osncore16AlfPtrVectorImplC1ERNS_8IDeleterE @ 10 NONAME
+	_ZN7osncore16AlfPtrVectorImplC1EjRNS_8IDeleterE @ 11 NONAME
+	_ZN7osncore16AlfPtrVectorImplC2ERNS_8IDeleterE @ 12 NONAME
+	_ZN7osncore16AlfPtrVectorImplC2EjRNS_8IDeleterE @ 13 NONAME
+	_ZN7osncore16AlfPtrVectorImplD1Ev @ 14 NONAME
+	_ZN7osncore16AlfPtrVectorImplD2Ev @ 15 NONAME
+	_ZN7osncore5toIntERKNS_7UStringE @ 16 NONAME
+	_ZN7osncore7UString5eraseEll @ 17 NONAME
+	_ZN7osncore7UString6appendEPKc @ 18 NONAME
+	_ZN7osncore7UString6appendERKS0_ @ 19 NONAME
+	_ZN7osncore7UString6insertElPKc @ 20 NONAME
+	_ZN7osncore7UString6insertElPKcl @ 21 NONAME
+	_ZN7osncore7UString7replaceElPKc @ 22 NONAME
+	_ZN7osncore7UString7replaceElPKcl @ 23 NONAME
+	_ZN7osncore7UStringC1EPKc @ 24 NONAME
+	_ZN7osncore7UStringC1EPKci @ 25 NONAME
+	_ZN7osncore7UStringC1ERKS0_ @ 26 NONAME
+	_ZN7osncore7UStringC1Em @ 27 NONAME
+	_ZN7osncore7UStringC1Ev @ 28 NONAME
+	_ZN7osncore7UStringC2EPKc @ 29 NONAME
+	_ZN7osncore7UStringC2EPKci @ 30 NONAME
+	_ZN7osncore7UStringC2ERKS0_ @ 31 NONAME
+	_ZN7osncore7UStringC2Em @ 32 NONAME
+	_ZN7osncore7UStringC2Ev @ 33 NONAME
+	_ZN7osncore7UStringD0Ev @ 34 NONAME
+	_ZN7osncore7UStringD1Ev @ 35 NONAME
+	_ZN7osncore7UStringD2Ev @ 36 NONAME
+	_ZN7osncore7UStringaSEPKc @ 37 NONAME
+	_ZN7osncore7UStringaSERKS0_ @ 38 NONAME
+	_ZN7osncore7UStringixEl @ 39 NONAME
+	_ZN7osncore7toUtf16ERKNS_7UStringE @ 40 NONAME
+	_ZN7osncore8UtfProxyItED1Ev @ 41 NONAME
+	_ZN7osncore8UtfProxyItED2Ev @ 42 NONAME
+	_ZNK7osncore7UString11InvalidUtf84whatEv @ 43 NONAME
+	_ZNK7osncore7UString13getByteLengthEv @ 44 NONAME
+	_ZNK7osncore7UString13getCharLengthEv @ 45 NONAME
+	_ZNK7osncore7UString6isNullEv @ 46 NONAME
+	_ZNK7osncore7UString7compareEPKc @ 47 NONAME
+	_ZNK7osncore7UString7compareERKS0_ @ 48 NONAME
+	_ZNK7osncore7UString7getUtf8Ev @ 49 NONAME
+	_ZNK7osncore7UString7isEmptyEv @ 50 NONAME
+	_ZNK7osncore7UString8compareCEPKc @ 51 NONAME
+	_ZNK7osncore7UString8compareCERKS0_ @ 52 NONAME
+	_ZNK7osncore7UStringeqEPKc @ 53 NONAME
+	_ZNK7osncore7UStringeqERKS0_ @ 54 NONAME
+	_ZTIN7osncore7UString11InvalidUtf8E @ 55 NONAME ; #<TI>#
+	_ZTIN7osncore7UStringE @ 56 NONAME ; #<TI>#
+	_ZTVN7osncore7UString11InvalidUtf8E @ 57 NONAME ; #<VT>#
+	_ZTVN7osncore7UStringE @ 58 NONAME ; #<VT>#
+	_ZdaPv6newarg @ 59 NONAME
+	_ZdlPv6newarg @ 60 NONAME
+	_Znaj6newarg @ 61 NONAME
+	_Znwj6newarg @ 62 NONAME
+

@@ -1,0 +1,59 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Alf iby file.
+*
+*/
+#ifndef __ALFRED_IBY__
+#define __ALFRED_IBY__
+
+#include <bldvariant.hrh>
+
+REM ALFRED
+
+// TEMP
+// New IBY file exporting improvements in 5.0 says that no need to include other IBY files
+#ifndef __S60_50__
+#include <aknfepuiinterface.iby>
+#endif
+
+#ifdef FF_ROM_INCLUDE_ALF 
+
+// HUIToolkit
+file=ABI_DIR\BUILD_DIR\hitchcock.dll            SHARED_LIB_DIR\hitchcock.dll
+
+#ifndef __SERIES60_30__
+// client
+file=ABI_DIR\BUILD_DIR\alfclient.dll            SHARED_LIB_DIR\alfclient.dll
+
+// App Server exe
+file=ABI_DIR\BUILD_DIR\alfredserver.exe         PROGRAMS_DIR\alfredserver.exe
+data=DATAZ_\APP_RESOURCE_DIR\alfredserver.RSC 	APP_RESOURCE_DIR\alfredserver.rsc
+data=ZSYSTEM\..\PRIVATE\10003A3F\APPS\alfredserver_REG.RSC Private\10003a3f\apps\alfredserver_reg.rsc
+
+// Server core
+file=ABI_DIR\BUILD_DIR\alfappservercore.dll     SHARED_LIB_DIR\alfappservercore.dll
+
+// File token server
+file=ABI_DIR\BUILD_DIR\ftokenclient.dll        SHARED_LIB_DIR\ftokenclient.dll
+file=ABI_DIR\BUILD_DIR\!ftokenserver.exe       PROGRAMS_DIR\!ftokenserver.exe
+
+
+// Stub sis file
+data=ABI_DIR\BUILD_DIR\uiaccelerator_stub.sis system\install\uiaccelerator_stub.sis
+
+#endif // #ifndef __SERIES60_30__
+
+#endif // #ifdef FF_ROM_INCLUDE_ALF
+
+#endif

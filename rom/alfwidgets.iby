@@ -1,0 +1,27 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: alfwidgets iby file.
+*
+*/
+#ifndef __ALFWIDGETS_IBY__
+#define __ALFWIDGETS_IBY__
+
+#include <bldvariant.hrh>
+
+
+ECOM_PLUGIN( alfcontainerwidget.dll , alfcontainerwidget.rsc )
+ECOM_PLUGIN( alfscrollbarwidget.dll , alfscrollbarwidget.rsc )
+ECOM_PLUGIN( alfviewwidget.dll , alfviewwidget.rsc )
+
+#endif // __ALFWIDGETS_IBY__

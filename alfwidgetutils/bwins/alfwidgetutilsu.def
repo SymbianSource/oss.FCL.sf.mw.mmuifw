@@ -1,0 +1,36 @@
+EXPORTS
+	??0AlfAttributeException@osncore@@QAE@H@Z @ 1 NONAME ; osncore::AlfAttributeException::AlfAttributeException(int)
+	??0AlfAttributeException@osncore@@QAE@HPBD0@Z @ 2 NONAME ; osncore::AlfAttributeException::AlfAttributeException(int, char const *, char const *)
+	??0AlfDataException@osncore@@QAE@H@Z @ 3 NONAME ; osncore::AlfDataException::AlfDataException(int)
+	??0AlfDataException@osncore@@QAE@HPBD0@Z @ 4 NONAME ; osncore::AlfDataException::AlfDataException(int, char const *, char const *)
+	??0AlfElementException@osncore@@QAE@H@Z @ 5 NONAME ; osncore::AlfElementException::AlfElementException(int)
+	??0AlfElementException@osncore@@QAE@HPBD0@Z @ 6 NONAME ; osncore::AlfElementException::AlfElementException(int, char const *, char const *)
+	??0AlfException@osncore@@QAE@H@Z @ 7 NONAME ; osncore::AlfException::AlfException(int)
+	??0AlfException@osncore@@QAE@HPBD0@Z @ 8 NONAME ; osncore::AlfException::AlfException(int, char const *, char const *)
+	??0AlfException@osncore@@QAE@HPBD@Z @ 9 NONAME ; osncore::AlfException::AlfException(int, char const *)
+	??0AlfFactoryPluginLoader@Alf@@QAE@XZ @ 10 NONAME ; Alf::AlfFactoryPluginLoader::AlfFactoryPluginLoader(void)
+	??0AlfVisualException@osncore@@QAE@H@Z @ 11 NONAME ; osncore::AlfVisualException::AlfVisualException(int)
+	??0AlfVisualException@osncore@@QAE@HPBD0@Z @ 12 NONAME ; osncore::AlfVisualException::AlfVisualException(int, char const *, char const *)
+	??0AlfWidgetException@osncore@@QAE@H@Z @ 13 NONAME ; osncore::AlfWidgetException::AlfWidgetException(int)
+	??0AlfWidgetException@osncore@@QAE@HPBD0@Z @ 14 NONAME ; osncore::AlfWidgetException::AlfWidgetException(int, char const *, char const *)
+	??0AlfWidgetFactoryLoader@Alf@@QAE@XZ @ 15 NONAME ; Alf::AlfWidgetFactoryLoader::AlfWidgetFactoryLoader(void)
+	??1AlfAttributeException@osncore@@UAE@XZ @ 16 NONAME ; osncore::AlfAttributeException::~AlfAttributeException(void)
+	??1AlfDataException@osncore@@UAE@XZ @ 17 NONAME ; osncore::AlfDataException::~AlfDataException(void)
+	??1AlfElementException@osncore@@UAE@XZ @ 18 NONAME ; osncore::AlfElementException::~AlfElementException(void)
+	??1AlfException@osncore@@UAE@XZ @ 19 NONAME ; osncore::AlfException::~AlfException(void)
+	??1AlfFactoryPluginLoader@Alf@@UAE@XZ @ 20 NONAME ; Alf::AlfFactoryPluginLoader::~AlfFactoryPluginLoader(void)
+	??1AlfVisualException@osncore@@UAE@XZ @ 21 NONAME ; osncore::AlfVisualException::~AlfVisualException(void)
+	??1AlfWidgetException@osncore@@UAE@XZ @ 22 NONAME ; osncore::AlfWidgetException::~AlfWidgetException(void)
+	??1AlfWidgetFactoryLoader@Alf@@UAE@XZ @ 23 NONAME ; Alf::AlfWidgetFactoryLoader::~AlfWidgetFactoryLoader(void)
+	?errorCode@AlfException@osncore@@UBEHXZ @ 24 NONAME ; int osncore::AlfException::errorCode(void) const
+	?fileAndLine@AlfException@osncore@@QBEPBDXZ @ 25 NONAME ; char const * osncore::AlfException::fileAndLine(void) const
+	?info@AlfException@osncore@@UBEPBDXZ @ 26 NONAME ; char const * osncore::AlfException::info(void) const
+	?loadFactoryPlugin@AlfFactoryPluginLoader@Alf@@QAEPAVIAlfFactoryPlugin@2@PBD@Z @ 27 NONAME ; class Alf::IAlfFactoryPlugin * Alf::AlfFactoryPluginLoader::loadFactoryPlugin(char const *)
+	?loadWidgetFactory@AlfWidgetFactoryLoader@Alf@@QAEPAVIAlfWidgetFactory@2@AAVCAlfEnv@@@Z @ 28 NONAME ; class Alf::IAlfWidgetFactory * Alf::AlfWidgetFactoryLoader::loadWidgetFactory(class CAlfEnv &)
+	?what@AlfAttributeException@osncore@@UBEPBDXZ @ 29 NONAME ; char const * osncore::AlfAttributeException::what(void) const
+	?what@AlfDataException@osncore@@UBEPBDXZ @ 30 NONAME ; char const * osncore::AlfDataException::what(void) const
+	?what@AlfElementException@osncore@@UBEPBDXZ @ 31 NONAME ; char const * osncore::AlfElementException::what(void) const
+	?what@AlfException@osncore@@UBEPBDXZ @ 32 NONAME ; char const * osncore::AlfException::what(void) const
+	?what@AlfVisualException@osncore@@UBEPBDXZ @ 33 NONAME ; char const * osncore::AlfVisualException::what(void) const
+	?what@AlfWidgetException@osncore@@UBEPBDXZ @ 34 NONAME ; char const * osncore::AlfWidgetException::what(void) const
+

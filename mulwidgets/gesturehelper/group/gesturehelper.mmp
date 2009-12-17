@@ -1,0 +1,49 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file 
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET        gesturehelper.dll
+TARGETTYPE    dll
+UID           0x0 0x20010978
+
+
+CAPABILITY    CAP_CLIENT_DLL
+VENDORID      VID_DEFAULT
+
+USERINCLUDE  ../inc
+SYSTEMINCLUDE  ../inc // public includes use other gesture helper headers as system include
+
+MW_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH    ../src
+
+SOURCE        gesture.cpp
+SOURCE        gesturecontrol.cpp
+SOURCE        gesturehelper.cpp
+SOURCE        gesturehelperimpl.cpp
+SOURCE        gesturerecogniser.cpp
+SOURCE        hittest.cpp
+SOURCE        pointarray.cpp
+SOURCE        pointercapturer.cpp
+SOURCE        utils.cpp
+
+LIBRARY       alfclient.lib
+LIBRARY       avkon.lib
+LIBRARY       cone.lib
+LIBRARY        ws32.lib
+LIBRARY       euser.lib

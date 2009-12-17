@@ -1,0 +1,137 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*    Project definition file
+*
+*/
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          alfwidgetmodel.dll
+TARGETTYPE      DLL
+
+
+
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+
+#ifndef __WINSCW__
+EPOCALLOWDLLDATA
+#endif
+
+USERINCLUDE     ../inc 
+USERINCLUDE     ../../../inc
+
+// This is a SYSTEMINCLUDE macro containing the middleware
+// layer specific include directories
+
+MW_LAYER_SYSTEMINCLUDE
+
+
+OS_LAYER_LIBC_SYSTEMINCLUDE
+OS_LAYER_STDCPP_SYSTEMINCLUDE
+OS_LAYER_BOOST_SYSTEMINCLUDE
+
+
+
+SOURCEPATH      ../src
+SOURCE          alfwidgeteventhandler.cpp
+SOURCE          alfwidgeteventhandlerimpl.cpp
+SOURCE          alfwidget.cpp
+SOURCE          alfwidgetimpl.cpp
+SOURCE          alfwidgetcontrol.cpp
+SOURCE          alfelement.cpp
+SOURCE          alfvisualtemplate.cpp
+SOURCE          alfreferencetovisual.cpp
+SOURCE          alfanimationoutput.cpp
+
+SOURCE          alfvarianttype.cpp
+SOURCE          alfmodel.cpp
+SOURCE          alfeventinput.cpp
+SOURCE          alfeventoutput.cpp
+SOURCE          alfrecyclinggridelement.cpp
+SOURCE          alfrecyclinggridelementimpl.cpp
+SOURCE          alfmodeloperation.cpp
+SOURCE          alfsort.cpp
+SOURCE          alfattribute.cpp
+SOURCE          alfattributevaluetype.cpp 
+SOURCE          alfenumvalue.cpp
+SOURCE          alfrealvalue.cpp
+SOURCE          alfstringvalue.cpp
+SOURCE          alfattributecontainer.cpp
+SOURCE          alfhostapiimpl.cpp
+SOURCE          alflayoutmanager.cpp
+SOURCE          alflayoutmanagerimpl.cpp
+SOURCE          alfgridlayoutmanager.cpp
+SOURCE          alfgridlayoutmanagerimpl.cpp
+SOURCE          alfanchorlayoutmanager.cpp
+SOURCE          alfanchorlayoutmanagerimpl.cpp
+SOURCE          alfcommonattributesetter.cpp
+SOURCE          alfcommonvisualattributesetter.cpp
+SOURCE          alfimagevisualattributesetter.cpp
+SOURCE          alftextvisualattributesetter.cpp
+SOURCE          alfgridlayoutattributesetter.cpp
+SOURCE          alfflowlayoutattributesetter.cpp
+SOURCE          alfcommonlayoutattributesetter.cpp
+
+SOURCE          alfanchorlayoutattributesetter.cpp
+
+SOURCE          alflinevisualattributesetter.cpp
+SOURCE          alfcurvepathlayoutattributesetter.cpp
+SOURCE          alfmeshvisualattributesetter.cpp
+SOURCE          alfviewportlayoutattributesetter.cpp
+SOURCE          alfdecklayoutattributesetter.cpp
+
+SOURCE          alfelementattributeownerimpl.cpp
+SOURCE          alfwidgetattributeownerimpl.cpp
+SOURCE          alfwidgetenvextension.cpp
+SOURCE          alfwidgetcommand.cpp
+SOURCE		      alfflowlayoutmanager.cpp
+SOURCE		      alfflowlayoutpolicyimpl.cpp
+SOURCE		      alfflowlayoutpreferencesimpl.cpp
+SOURCE		      alfgridlayoutpolicyimpl.cpp
+SOURCE          alfwidgetcontroleventfilter.cpp
+
+LANG            SC
+
+LIBRARY    euser.lib
+LIBRARY    efsrv.lib
+LIBRARY    flogger.lib
+LIBRARY    charconv.lib 
+
+LIBRARY    libc.lib
+
+LIBRARY    alfclient.lib 
+
+LIBRARY    osncore.lib 
+
+LIBRARY    alfwidgetutils.lib
+
+LIBRARY alfresourcepool.lib
+    LIBRARY libstdcpp.lib 
+
+#define ALF_LINK_STDCPP_DLL
+// following include must be after definition
+
+LIBRARY     libpthread.lib
+#ifdef RD_TACTILE_FEEDBACK
+LIBRARY     touchfeedback.lib
+#endif // RD_TACTILE_FEEDBACK
+
+#ifdef RD_ALF_IN_PLATFORM
+
+#endif
+// End of file.

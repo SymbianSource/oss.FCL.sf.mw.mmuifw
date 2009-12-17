@@ -1,0 +1,109 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: ;Language - standard language definitions
+;
+&EN
+
+; standard SIS file header
+#{"CoverFlowTest"},(0x0AE3C7F),1,0,0
+
+;Supports Series 60 v 3.0
+[0x1028315F], 0, 0, 0, {"Series60ProductID"}
+
+;Localized Vendor Name
+%{"Nokia"}
+
+;Unique Vendor name
+:"Nokia"
+
+; Files to copy
+
+
+"\epoc32\release\armv5\udeb\testcoverflowwidget.exe"-"!:\sys\bin\testcoverflowwidget.exe"
+"\epoc32\data\z\private\10003a3f\import\apps\TESTCOVERFLOWWIDGET_reg.rsc"-"!:\private\10003a3f\import\apps\TESTCOVERFLOWWIDGET_reg.rsc"
+"\epoc32\data\z\resource\apps\TESTCOVERFLOWWIDGET_loc.RSc"-"!:\resource\apps\TESTCOVERFLOWWIDGET_loc.RSc"
+"\epoc32\data\z\resource\apps\testcoverflowwidget.RSc"-"!:\resource\apps\testcoverflowwidget.RSc"
+
+
+"\epoc32\winscw\c\dataimage\coverflow\i01.png" -"c:\dataimage\coverflow\i01.png"
+"\epoc32\winscw\c\dataimage\coverflow\i02.png" -"c:\dataimage\coverflow\i02.png"
+"\epoc32\winscw\c\dataimage\coverflow\i03.png" -"c:\dataimage\coverflow\i03.png"
+"\epoc32\winscw\c\dataimage\coverflow\i04.png" -"c:\dataimage\coverflow\i04.png"
+"\epoc32\winscw\c\dataimage\coverflow\i05.png" -"c:\dataimage\coverflow\i05.png"
+"\epoc32\winscw\c\dataimage\coverflow\i06.png" -"c:\dataimage\coverflow\i06.png"
+"\epoc32\winscw\c\dataimage\coverflow\i07.png" -"c:\dataimage\coverflow\i07.png"
+"\epoc32\winscw\c\dataimage\coverflow\i08.png" -"c:\dataimage\coverflow\i08.png"
+"\epoc32\winscw\c\dataimage\coverflow\i09.png" -"c:\dataimage\coverflow\i09.png"
+"\epoc32\winscw\c\dataimage\coverflow\i10.png" -"c:\dataimage\coverflow\i10.png"
+"\epoc32\winscw\c\dataimage\coverflow\i11.png" -"c:\dataimage\coverflow\i11.png"
+"\epoc32\winscw\c\dataimage\coverflow\i12.png" -"c:\dataimage\coverflow\i12.png"
+
+
+"\epoc32\winscw\c\dataimage\coverflow\bmp.bmp" -"c:\dataimage\coverflow\bmp.bmp"
+"\epoc32\winscw\c\dataimage\coverflow\gif.gif" -"c:\dataimage\coverflow\gif.gif"
+"\epoc32\winscw\c\dataimage\coverflow\ci01.jpg" -"c:\dataimage\coverflow\ci01.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\jpeg.jpg" -"c:\dataimage\coverflow\jpeg.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\svg.svg" -"c:\dataimage\coverflow\svg.svg"
+"\epoc32\winscw\c\dataimage\coverflow\schedule.png" -"c:\dataimage\coverflow\schedule.png"
+"\epoc32\winscw\c\dataimage\coverflow\icon.png" -"c:\dataimage\coverflow\icon.png"
+"\epoc32\winscw\c\dataimage\coverflow\1.jpg" -"c:\dataimage\coverflow\1.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\2.jpg" -"c:\dataimage\coverflow\2.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\3.jpg" -"c:\dataimage\coverflow\3.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\4.jpg" -"c:\dataimage\coverflow\4.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\5.jpg" -"c:\dataimage\coverflow\5.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\6.jpg" -"c:\dataimage\coverflow\6.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\7.jpg" -"c:\dataimage\coverflow\7.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\8.jpg" -"c:\dataimage\coverflow\8.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\9.jpg" -"c:\dataimage\coverflow\9.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\10.jpg" -"c:\dataimage\coverflow\10.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\11.jpg" -"c:\dataimage\coverflow\11.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\12.jpg" -"c:\dataimage\coverflow\12.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\13.jpg" -"c:\dataimage\coverflow\13.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\14.jpg" -"c:\dataimage\coverflow\14.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\15.jpg" -"c:\dataimage\coverflow\15.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\16.jpg" -"c:\dataimage\coverflow\16.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\17.jpg" -"c:\dataimage\coverflow\17.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\18.jpg" -"c:\dataimage\coverflow\18.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\19.jpg" -"c:\dataimage\coverflow\19.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\20.jpg" -"c:\dataimage\coverflow\20.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\21.jpg" -"c:\dataimage\coverflow\21.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\22.jpg" -"c:\dataimage\coverflow\22.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\23.jpg" -"c:\dataimage\coverflow\23.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\24.jpg" -"c:\dataimage\coverflow\24.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\25.jpg" -"c:\dataimage\coverflow\25.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\26.jpg" -"c:\dataimage\coverflow\26.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\27.jpg" -"c:\dataimage\coverflow\27.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\28.jpg" -"c:\dataimage\coverflow\28.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\29.jpg" -"c:\dataimage\coverflow\29.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\30.jpg" -"c:\dataimage\coverflow\30.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\31.jpg" -"c:\dataimage\coverflow\31.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\32.jpg" -"c:\dataimage\coverflow\32.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\33.jpg" -"c:\dataimage\coverflow\33.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\34.jpg" -"c:\dataimage\coverflow\34.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\35.jpg" -"c:\dataimage\coverflow\35.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\36.jpg" -"c:\dataimage\coverflow\36.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\37.jpg" -"c:\dataimage\coverflow\37.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\38.jpg" -"c:\dataimage\coverflow\38.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\39.jpg" -"c:\dataimage\coverflow\39.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\40.jpg" -"c:\dataimage\coverflow\40.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\41.jpg" -"c:\dataimage\coverflow\41.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\42.jpg" -"c:\dataimage\coverflow\42.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\43.jpg" -"c:\dataimage\coverflow\43.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\44.jpg" -"c:\dataimage\coverflow\44.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\45.jpg" -"c:\dataimage\coverflow\45.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\46.jpg" -"c:\dataimage\coverflow\46.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\47.jpg" -"c:\dataimage\coverflow\47.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\48.jpg" -"c:\dataimage\coverflow\48.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\49.jpg" -"c:\dataimage\coverflow\49.jpg"
+"\epoc32\winscw\c\dataimage\coverflow\50.jpg" -"c:\dataimage\coverflow\50.jpg"

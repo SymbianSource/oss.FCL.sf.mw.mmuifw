@@ -1,0 +1,55 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: ;Language - standard language definitions
+;
+&EN
+
+; standard SIS file header
+#{"MetapaneTest"},(0x0954A52),1,0,0
+
+;Supports Series 60 v 3.0
+[0x1028315F], 0, 0, 0, {"Series60ProductID"}
+
+;Localized Vendor Name
+%{"Nokia"}
+
+;Unique Vendor name
+:"Nokia"
+
+; Files to copy
+
+;=============================
+;TestMulMetapaneWidget 
+;=============================
+"\epoc32\release\armv5\urel\testmetapanewidget.exe"-"!:\sys\bin\testmetapanewidget.exe"
+"\epoc32\data\z\private\10003a3f\import\apps\testmetapanewidget_reg.rsc"-"!:\private\10003a3f\import\apps\testmetapanewidget_reg.rsc"
+"\epoc32\data\z\resource\apps\testmetapanewidget_loc.rsc"-"!:\resource\apps\testmetapanewidget_loc.rsc"
+"\epoc32\data\z\resource\apps\testmetapanewidget.rsc"-"!:\resource\apps\testmetapanewidget.rsc"
+
+;=============================
+;Images for metapane widget
+;=============================
+"\epoc32\WINSCW\C\dataimage\metapane\i01.png"    -"c:\dataimage\metapane\i01.png"
+"\epoc32\WINSCW\C\dataimage\metapane\i02.png"    -"c:\dataimage\metapane\i02.png"
+"\epoc32\WINSCW\C\dataimage\metapane\i03.png"    -"c:\dataimage\metapane\i03.png"
+"\epoc32\WINSCW\C\dataimage\metapane\i04.png"    -"c:\dataimage\metapane\i04.png"
+"\epoc32\WINSCW\C\dataimage\metapane\i05.png"    -"c:\dataimage\metapane\i05.png"
+"\epoc32\WINSCW\C\dataimage\metapane\i06.png"    -"c:\dataimage\metapane\i06.png"
+"\epoc32\WINSCW\C\dataimage\metapane\i07.png"    -"c:\dataimage\metapane\i07.png"
+"\epoc32\WINSCW\C\dataimage\metapane\i08.png"    -"c:\dataimage\metapane\i08.png"
+"\epoc32\WINSCW\C\dataimage\metapane\i09.png"    -"c:\dataimage\metapane\i09.png"
+"\epoc32\WINSCW\C\dataimage\metapane\i10.png"    -"c:\dataimage\metapane\i10.png"
+"\epoc32\WINSCW\C\dataimage\metapane\i11.png"    -"c:\dataimage\metapane\i11.png"
+"\epoc32\WINSCW\C\dataimage\metapane\play.png"   -"c:\dataimage\metapane\play.png"
+"\epoc32\WINSCW\C\dataimage\metapane\stop.png"   -"c:\dataimage\metapane\stop.png"

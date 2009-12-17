@@ -1,0 +1,69 @@
+/*
+* Copyright (c) 2007-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file 
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          muldatamodel.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x2000D247
+
+
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+
+
+#ifndef __WINSCW__
+EPOCALLOWDLLDATA
+#endif
+
+SOURCEPATH 		../src
+SOURCE 			mulmodelimpl.cpp
+SOURCE			mulpushmode.cpp 
+SOURCE			mulpullmode.cpp 
+SOURCE 			mulcachemanager.cpp 
+SOURCE			mulvisualitem.cpp
+SOURCE			muldatapath.cpp
+SOURCE			mulpagedatawindow.cpp
+SOURCE			mulasyncdataprovider.cpp
+
+
+USERINCLUDE     ../inc
+USERINCLUDE		  ../../common/inc
+USERINCLUDE     ../../mullogging/inc
+USERINCLUDE     ../../../inc/alf
+USERINCLUDE     ../../../inc
+
+//Required by muldatamodel.UID
+MW_LAYER_SYSTEMINCLUDE
+OS_LAYER_LIBC_SYSTEMINCLUDE
+OS_LAYER_GLIB_SYSTEMINCLUDE
+OS_LAYER_STDCPP_SYSTEMINCLUDE
+
+LIBRARY                 euser.lib
+LIBRARY                 ecom.lib
+LIBRARY                 alfwidgetmodel.lib
+LIBRARY	                osncore.lib
+LIBRARY                 libc.lib
+LIBRARY                 mulmodelutility.lib //For Visual Item and Filter
+LIBRARY                 libpthread.lib
+LIBRARY					        libstdcpp.lib
+LIBRARY                 mullogging.lib  //for logging
+
+
+// End of File
+

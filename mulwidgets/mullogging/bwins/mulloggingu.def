@@ -1,0 +1,9 @@
+EXPORTS
+	?Close@RMulLogClient@@QAEXXZ @ 1 NONAME ; void RMulLogClient::Close(void)
+	?CommitToFileL@RMulLogManager@@QAEXABVTDesC16@@@Z @ 2 NONAME ; void RMulLogManager::CommitToFileL(class TDesC16 const &)
+	?CreateL@RMulLogManager@@QAEXXZ @ 3 NONAME ; void RMulLogManager::CreateL(void)
+	?Open@RMulLogClient@@QAEHVTObjectId@@@Z @ 4 NONAME ; int RMulLogClient::Open(class TObjectId)
+	?Release@RMulLogManager@@QAEXXZ @ 5 NONAME ; void RMulLogManager::Release(void)
+	?Write@RMulLogClient@@QAEXABVTDesC8@@@Z @ 6 NONAME ; void RMulLogClient::Write(class TDesC8 const &)
+	?WriteFormat@MulLogger@@YAXV?$TRefByValue@$$CBVTDesC8@@@@ZZ @ 7 NONAME ; void MulLogger::WriteFormat(class TRefByValue<class TDesC8 const >, ...)
+
