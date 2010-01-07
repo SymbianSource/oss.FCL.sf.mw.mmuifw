@@ -21,6 +21,8 @@
 
 ECOM_PLUGIN( mulsliderwidget.dll, mulsliderwidget.rsc )
 
+SCALABLE_IMAGE(APP_BITMAP_DIR,APP_BITMAP_DIR,mulsliderwidget)
+
 data=EPOCROOT##epoc32\data\z\resource\slider\mui_cover_handle.svg	\resource\slider\mui_cover_handle.svg
 data=EPOCROOT##epoc32\data\z\resource\slider\mui_handle.png	        \resource\slider\mui_handle.png
 data=EPOCROOT##epoc32\data\z\resource\slider\mui_slider_progress.svg	\resource\slider\mui_slider_progress.svg

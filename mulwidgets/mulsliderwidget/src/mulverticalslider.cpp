@@ -143,7 +143,7 @@ struct MulVerticalSliderDataImpl
     
 // bitmap file path
 _LIT(KAvkonBitmapFile,"\\resource\\apps\\avkon2.mbm");
-_LIT(KImageViewerBitmapFile,"\\resource\\apps\\ImageViewer.mif");
+_LIT(KSliderBitmapFile,"\\resource\\apps\\mulsliderwidget.mif");
 
 const TInt KAlfTrackTopTextureId = 1;
 const TInt KAlfTrackBottomTextureId = 2;
@@ -604,7 +604,7 @@ void MulSliderVertical::ProvideBitmapL (TInt aId, CFbsBitmap *& aBitmap, CFbsBit
             AknIconUtils::CreateIconL(
                    aBitmap,
                    aMaskBitmap,
-                   KImageViewerBitmapFile,
+                   KSliderBitmapFile,
                    EMbmMulsliderwidgetQgn_indi_nslider_zoom_in,
                    EMbmMulsliderwidgetQgn_indi_nslider_zoom_in_mask );    
 
@@ -624,7 +624,7 @@ void MulSliderVertical::ProvideBitmapL (TInt aId, CFbsBitmap *& aBitmap, CFbsBit
              AknIconUtils::CreateIconL(
                     aBitmap,
                     aMaskBitmap,
-                    KImageViewerBitmapFile,
+                    KSliderBitmapFile,
                     EMbmMulsliderwidgetQgn_indi_nslider_zoom_out,
                     EMbmMulsliderwidgetQgn_indi_nslider_zoom_out_mask ); 
 
