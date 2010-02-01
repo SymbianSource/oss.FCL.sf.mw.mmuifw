@@ -21,7 +21,7 @@
 #include <alf/ialfmap.h>
 #include <alf/alfvarianttype.h>
 #include <alf/ialfsortfunction.h>
-#include "alf/alfperf.h"
+//#include "alf/alfperf.h"
 #include "alfsort.h"
 
 using namespace Alf;
@@ -170,10 +170,10 @@ void AlfSortSwap::Swap(TInt aLeft, TInt aRight) const
 void AlfSort::sort(IAlfVariantType** aArr, uint aCount,
                    const IAlfSortFunction& aSortFunction )
     {
-    ALF_PERF_START( perfdata, "AlfSort-Sort-Sorting")
+    //ALF_PERF_START( perfdata, "AlfSort-Sort-Sorting")
     AlfSortKey key(aSortFunction, aArr, aCount);
     AlfSortSwap swap(aArr, aCount);
     User::QuickSort( aCount, key, swap );
-    ALF_PERF_STOP( perfdata, "AlfSort-Sort-Sorting")
+    //ALF_PERF_STOP( perfdata, "AlfSort-Sort-Sorting")
     }
 

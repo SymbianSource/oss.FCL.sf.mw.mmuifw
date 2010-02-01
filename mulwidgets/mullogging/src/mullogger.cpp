@@ -21,7 +21,7 @@
 
 // EXTERNAL INCLUDES
 #include <e32debug.h>
-#include <flogger.h>
+//#include <flogger.h>
 
 // INTERNAL INCLUDES
 //#include "mullogchunk.h"

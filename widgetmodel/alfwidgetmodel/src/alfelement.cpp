@@ -21,7 +21,7 @@
 #include <alf/alfvarianttype.h>
 #include "alf/ialfvisualtemplate.h"
 #include "alf/alfreferencetovisual.h"
-#include "alf/alfperf.h"
+//#include "alf/alfperf.h"
 #include <alf/alfexceptions.h>
 
 #include "alfelementattributeownerimpl.h"
@@ -149,11 +149,11 @@ OSN_EXPORT void AlfElement::createChildVisualTree(
     {
     // Pass directly to the child element CreateVisualTree, no need
     // to do anything else. Derived classes may need additional steps here.
-    ALF_PERF_START( perfdata, "AlfElement-createVisualTree-createChildVisualTree")
+//    ALF_PERF_START( perfdata, "AlfElement-createVisualTree-createChildVisualTree")
     aElement->createVisualTree( aChildData, aData, aIndex, aDataID,
                                 aElement->defaultParentLayout( aDataID ),
                                 aIndex );
-    ALF_PERF_STOP( perfdata, "AlfElement-createVisualTree-createChildVisualTree")
+//    ALF_PERF_STOP( perfdata, "AlfElement-createVisualTree-createChildVisualTree")
     }
 
 OSN_EXPORT CAlfVisual* AlfElement::createVisualTree(
@@ -330,11 +330,11 @@ OSN_EXPORT void AlfElement::updateVisualTree(
             {
             // Update the contents of the visual tree
             CAlfVisual* visual = mData->mVisualTreeArray[index]->mVisualTree;
-            ALF_PERF_START( perfdata, "AlfElement-updateVisualTree-VTUpdateVisualTree")
+            //ALF_PERF_START( perfdata, "AlfElement-updateVisualTree-VTUpdateVisualTree")
             mData->mVisualTreeArray[index]->mVisualTree =
                 mData->mVisualTemplate->updateVisualTree(
                     currentNewData, currentOldData, *visual );
-            ALF_PERF_STOP( perfdata, "AlfElement-UpdateVisualTree-VTUpdateVisualTree")
+            //ALF_PERF_STOP( perfdata, "AlfElement-UpdateVisualTree-VTUpdateVisualTree")
             }
         }
 

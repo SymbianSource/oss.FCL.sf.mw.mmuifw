@@ -286,11 +286,25 @@ TBool CGestureHelperImpl::HandlePointerEventL( const TPointerEvent& aEvent,
                 }
             else if( iPointerCount == 2 )
                 {
+                // This case is similar to reciving a pointer up on the pointer
+                // on which the second down is recieved. We reset all the earlier points
+                // recieved on this pointer because we assume that some pointer up got
+                // missed in between.
+            
                 // if pointer count is already 2, then reset the array of pointer for 
                 // which a down event is recieved, and continue handling in normal way
+                // Fix for error crash in photos fullscreen
+                // Like above if you reset the pointer array for which the down event
+                // is recieved the second time then in thecase of, 0 down, 1 down, 0 down
+                // iPoints will be null.
+                // Here whenever reseting it to single pointer havndling, always iPoints should have
+                // the data. Hence the first parameter should always be true.
+                // Fix is iGesture->ResetToLastPoint(pointerNumber != 0,pointerNumber != 0);
+                // is changed to iGesture->ResetToLastPoint( ETrue,pointerNumber != 0);
                 iPointerCount = 1; 
                 iCurrentPointer = pointerNumber == 0 ? 1 : 0;
-                iGesture->ResetToLastPoint(pointerNumber != 0,pointerNumber != 0);
+                iGesture->ResetToLastPoint( ETrue,pointerNumber != 0);
+                iGesture->SetSingleTouchActive();
                 }
 
             if(iPointerCount == 0)

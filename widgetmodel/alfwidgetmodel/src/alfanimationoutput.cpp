@@ -28,7 +28,7 @@
 #include <alf/alfcontrol.h>
 #include <alf/alfenv.h>
 #include <alf/alfexceptions.h>
-#include "alf/alfperf.h"
+//#include "alf/alfperf.h"
 #include "alfanimationoutput.h"
 
 namespace Alf
@@ -96,10 +96,10 @@ OSN_EXPORT void AlfAnimationOutput::sendCommand(
     if ( visual )
         {
         // Create the animation command(s) and send them through the env.
-        ALF_PERF_START( perfdata, "AlfAnimationOutput-sendCommand-createAndSendCommands" )
+        //ALF_PERF_START( perfdata, "AlfAnimationOutput-sendCommand-createAndSendCommands" )
         // reference visual is optional, it may be 0.
         mAttributeSetter->createAndSendCommands( *visual, mAttributeContainer, ref );
-        ALF_PERF_STOP( perfdata, "AlfAnimationOutput-sendCommand-createAndSendCommands" )
+        //ALF_PERF_STOP( perfdata, "AlfAnimationOutput-sendCommand-createAndSendCommands" )
         }
     }
 

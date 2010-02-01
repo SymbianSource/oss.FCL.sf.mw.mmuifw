@@ -27,7 +27,7 @@
 #include "alf/alfmodeloperation.h"
 #include <alf/alfvarianttype.h>
 #include <alf/alfexceptions.h>
-#include "alf/alfperf.h"
+//#include "alf/alfperf.h"
 #include <osn/osnnew.h>
 
 using osncore::AlfPtrVector;
@@ -218,7 +218,7 @@ void AlfModel::addData(AlfModelOperation* aAddOperation)
     IAlfVariantType* parentData = 0;
     try
         {
-        ALF_PERF_START( perfdata, "AlfModel-AddData-Adding")
+        //ALF_PERF_START( perfdata, "AlfModel-AddData-Adding")
         newData = aAddOperation->getNewData();     
         parentData  = aAddOperation->parentData(*data());
         int index = aAddOperation->index();
@@ -248,7 +248,7 @@ void AlfModel::addData(AlfModelOperation* aAddOperation)
             {
             parentData->container()->addItem(index, newData);
             }
-        ALF_PERF_STOP( perfdata, "AlfModel-AddData-Adding")
+        //ALF_PERF_STOP( perfdata, "AlfModel-AddData-Adding")
         }
 	catch(AlfDataException& e)	        
         {
@@ -270,7 +270,7 @@ void AlfModel::removeData(AlfModelOperation* aRemoveOperation)
 
     try
         {
-        ALF_PERF_START( perfdata, "AlfModel-RemoveData-Removing")
+        //ALF_PERF_START( perfdata, "AlfModel-RemoveData-Removing")
         parentData  = aRemoveOperation->parentData(*data());         
         int index = aRemoveOperation->index();
 
@@ -295,7 +295,7 @@ void AlfModel::removeData(AlfModelOperation* aRemoveOperation)
             {
             parentData->container()->removeItem(index);
             }    
-        ALF_PERF_STOP( perfdata, "AlfModel-RemoveData-Removing")
+        //ALF_PERF_STOP( perfdata, "AlfModel-RemoveData-Removing")
         }
     catch(AlfDataException& e)
         {
@@ -314,7 +314,7 @@ void AlfModel::updateData(AlfModelOperation* aUpdateOperation)
 
     try
         {
-        ALF_PERF_START( perfdata, "AlfModel-UpdateData-Updating")
+        //ALF_PERF_START( perfdata, "AlfModel-UpdateData-Updating")
         newData= aUpdateOperation->getNewData();
 
         parentData  = aUpdateOperation->parentData(*data());
@@ -342,7 +342,7 @@ void AlfModel::updateData(AlfModelOperation* aUpdateOperation)
             {
             parentData->container()->replaceItem(index,newData);
             }
-        ALF_PERF_STOP( perfdata, "AlfModel-UpdateData-Updating")
+        //ALF_PERF_STOP( perfdata, "AlfModel-UpdateData-Updating")
         }
     catch(AlfDataException& e)
         {

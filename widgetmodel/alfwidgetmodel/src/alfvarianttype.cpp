@@ -27,7 +27,7 @@
 #include <osn/osncommon.h>
 #include <osn/ustring.h>
 #include <alf/alfexceptions.h>
-#include "alf/alfperf.h"
+//#include "alf/alfperf.h"
 #include <osn/osnnew.h>
 #include "alfsort.h"
 
@@ -581,7 +581,7 @@ OSN_EXPORT IAlfContainer* AlfContainer::clone()
     {
     try
     {
-        ALF_PERF_START( perfdata, "AlfContainer-Clone-Cloning Container")
+        //ALF_PERF_START( perfdata, "AlfContainer-Clone-Cloning Container")
         auto_ptr<AlfContainer> clone( new( EMM ) AlfContainer() );
         auto_ptr<IAlfVariantType> childData;
         
@@ -627,7 +627,7 @@ OSN_EXPORT IAlfContainer* AlfContainer::clone()
             clone->mContainerData->mArray.insert( clone->mContainerData->mArray.count(), childData.get() );
             childData.release(); // ownership was transferred.
             }
-        ALF_PERF_STOP( perfdata, "AlfContainer-Clone-Cloning Container")
+        //ALF_PERF_STOP( perfdata, "AlfContainer-Clone-Cloning Container")
         return clone.release();
       }
       catch(...)
@@ -1065,7 +1065,7 @@ OSN_EXPORT IAlfMap* AlfMap::clone()
     {
     try
         {
-        ALF_PERF_START( perfdata, "AlfContainer-Clone-Cloning Map")
+        //ALF_PERF_START( perfdata, "AlfContainer-Clone-Cloning Map")
         auto_ptr<AlfMap> clone( new(EMM) AlfMap() );
         auto_ptr<MapItem> cloneItem;
 
@@ -1117,7 +1117,7 @@ OSN_EXPORT IAlfMap* AlfMap::clone()
             clone->mMapDataImpl->mArray.insert(clone->mMapDataImpl->mArray.count(),cloneItem.get() );
             cloneItem.release();
             }
-        ALF_PERF_STOP( perfdata, "AlfContainer-Clone-Cloning Map")
+        //ALF_PERF_STOP( perfdata, "AlfContainer-Clone-Cloning Map")
 
         return clone.release();
         }

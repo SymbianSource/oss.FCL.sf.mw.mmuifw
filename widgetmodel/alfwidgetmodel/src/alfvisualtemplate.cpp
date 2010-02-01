@@ -31,7 +31,7 @@
 #include <alf/alftexture.h>
 #include <alf/alfenv.h>
 #include <alf/alfexceptions.h>
-#include "alf/alfperf.h"
+//#include "alf/alfperf.h"
 #include <osn/osnnew.h>
 #include <alf/ialfelement.h>
 #include "alf/alfvisualtemplate.h"
@@ -372,9 +372,9 @@ OSN_EXPORT CAlfVisual* AlfVisualTemplate::updateVisualTree(IAlfMap* aData, IAlfM
         {
         try
             {
-            ALF_PERF_START( perfdata, "AlfVisualTemplate-updateVisualTree-SetAttributeValue")
+            //ALF_PERF_START( perfdata, "AlfVisualTemplate-updateVisualTree-SetAttributeValue")
             mAttributeArray[i]->setAttributeValue(aVisual, mContainerArray[i], aData);
-            ALF_PERF_STOP( perfdata, "AlfVisualTemplate-updateVisualTree-setAttributeValue")
+            //ALF_PERF_STOP( perfdata, "AlfVisualTemplate-updateVisualTree-setAttributeValue")
             }
         catch (...)
             {
@@ -433,11 +433,11 @@ OSN_EXPORT CAlfVisual* AlfVisualTemplate::createVisualTree(CAlfControl& aControl
         {
         if (mVisualType < 0)
             {
-            ALF_PERF_START( perfdata, "AlfVisualTemplate-createVisualTree-NewLayout")
+            //ALF_PERF_START( perfdata, "AlfVisualTemplate-createVisualTree-NewLayout")
             // create layout
             result = layout = AlfVisualFactory::NewLayoutL(
                                   (TAlfLayoutType)(-1 - mVisualType), aParentLayout, aControl, aControl.Env());
-            ALF_PERF_STOP( perfdata, "AlfVisualTemplate-createVisualTree-NewLayout")
+            //ALF_PERF_STOP( perfdata, "AlfVisualTemplate-createVisualTree-NewLayout")
             if (!result)
                 {
                 ALF_THROW(AlfVisualException,ECanNotCreateVisual,"AlfVisualTemplate")
@@ -446,10 +446,10 @@ OSN_EXPORT CAlfVisual* AlfVisualTemplate::createVisualTree(CAlfControl& aControl
         else
             {
             // create visual
-            ALF_PERF_START( perfdata, "AlfVisualTemplate-createVisualTree-NewVisual")
+            //ALF_PERF_START( perfdata, "AlfVisualTemplate-createVisualTree-NewVisual")
             result = AlfVisualFactory::NewVisualL(
                          (TAlfVisualType)mVisualType, aParentLayout, aControl, aControl.Env());
-            ALF_PERF_STOP( perfdata, "AlfVisualTemplate-createVisualTree-NewVisual")
+            //ALF_PERF_STOP( perfdata, "AlfVisualTemplate-createVisualTree-NewVisual")
             if (!result)
                 {
                 ALF_THROW(AlfVisualException,ECanNotCreateVisual,"AlfVisualTemplate")
@@ -486,14 +486,14 @@ OSN_EXPORT CAlfVisual* AlfVisualTemplate::createVisualTree(CAlfControl& aControl
             {
             try
                 {
-                ALF_PERF_START( perfdata, "AlfVisualTemplate-createVisualTree-setAttributeValue")
+                //ALF_PERF_START( perfdata, "AlfVisualTemplate-createVisualTree-setAttributeValue")
                 // set dirtines of all attribute in createvisualtree
                 for(int j = 0; j < mContainerArray[i]->attributeCount() ;j++ )
                     {
                     mContainerArray[i]->getAttribute(j).setDirty(true);
                     }
                 mAttributeArray[i]->setAttributeValue(*result, mContainerArray[i], aData);
-                ALF_PERF_STOP( perfdata, "AlfVisualTemplate-createVisualTree-setAttributeValue")
+                //ALF_PERF_STOP( perfdata, "AlfVisualTemplate-createVisualTree-setAttributeValue")
                 }
             catch (...)
                 {
