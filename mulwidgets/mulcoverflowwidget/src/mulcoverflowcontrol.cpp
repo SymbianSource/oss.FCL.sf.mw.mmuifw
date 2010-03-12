@@ -774,9 +774,14 @@ void MulCoverFlowControl::ModelStateChanged( TMulChangedState aState, IMulVarian
             break;
             }
         case EItemsInserted:
+            {
+            HandleModelCountChange();
+            break;
+            }
         case EItemsRemoved:
         	{
         	HandleModelCountChange();
+        	CAlfWidgetControl::processEvent( TAlfEvent( ETypeItemRemoved ));
         	break;
         	}
         

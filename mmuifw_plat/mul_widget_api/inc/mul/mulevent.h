@@ -99,7 +99,10 @@ namespace Alf
 		ECustomEventIconRelease,                /*!< A message regarding release on icon.
                                                 * no custom data required. */   
 		
-		ETypePinch                /*!< A message regarding a multitouch pinch gesture identified in coverflow */                                                 
+		ETypePinch,                             /*!< A message regarding a multitouch pinch gesture identified in coverflow */  
+		
+		ETypeItemRemoved                        /*!< A message regarding a remove operation completed. Requested by photos for refreshing
+                                                     the HDMI view when an item is deleted, No custom data  */ 
         };
                                                        
         
