@@ -337,7 +337,6 @@ void AlfViewWidget::notifyViewActivated(bool aIsActivated)
         // Update control pane, status pane and background according to state of the view.
         updateStatusPane();
         updateControlPane();
-        updateBackGroundImage();
         // When a view is activated, it sets the size of the display to full screen
         // This is done so that the view widget gets pointer events in the entire screen
         TRect screenRect(TPoint(0,0), TSize(AlfUtil::ScreenSize()));
@@ -440,7 +439,6 @@ void AlfViewWidget::enableStatusPane(bool aEnable)
 	    if(getViewStackPosition() == 0)
 	        {
 	        updateStatusPane();
-            updateBackGroundImage();
 	        }
 		}
     }
@@ -455,7 +453,6 @@ void AlfViewWidget::enableControlPane(bool aEnable)
 	    if(getViewStackPosition() == 0)
 	        {        
             updateControlPane();
-            updateBackGroundImage();
 	        }
         }
     }
@@ -675,7 +672,6 @@ void AlfViewWidget::HandleActionL(const TAlfActionCommand& aActionCommand)
 
               // SetVisibleArea() only have an effect if the application is on foreground!
               control()->Env().PrimaryDisplay().SetVisibleArea(screenRect);
-              updateBackGroundImage(); 
               }
        
         }
@@ -689,7 +685,6 @@ void AlfViewWidget::HandleActionL(const TAlfActionCommand& aActionCommand)
             
             control()->Env().PrimaryDisplay().SetVisibleArea(screenRect);
             
-            updateBackGroundImage(); 
         
         } 
 
@@ -733,7 +728,6 @@ void AlfViewWidget::setRect(const TRect& aRect)
     	// the display area is required to be full screen, for the pointer grab to work
     	// check here whether the display area is full screen. If not, set it to full screen
         control()->Env().PrimaryDisplay().SetVisibleArea(screenRect);
-        updateBackGroundImage(); 
         }
     }
 
