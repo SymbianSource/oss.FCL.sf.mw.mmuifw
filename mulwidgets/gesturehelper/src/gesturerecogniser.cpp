@@ -172,7 +172,7 @@ inline TGestureCode LastDirection( const TPointArray& aPoints, MGestureEvent::TA
     
     TRect toleranceRect = ToleranceRect( (aPoints.TPointArray::operator[])(aPoints.Count() - 1), aRelevantAxis );
     
-    TInt latestPointIndex = LatestCertainPointIndex( aPoints, TPointArray::operator[],toleranceRect  );
+    TInt latestPointIndex = LatestCertainPointIndex( aPoints, &TPointArray::operator[],toleranceRect  );
     if ( KErrNotFound != latestPointIndex )
         {
         return Direction( aPoints[latestPointIndex], LastPoint( aPoints ) );
@@ -190,7 +190,7 @@ inline TBool IsTap( const TPointArray& aPoints )
     
     TRect toleranceRect = ToleranceRect( (aPoints.TPointArray::Raw)(0) );
     
-    return KErrNotFound == LatestCertainPointIndex( aPoints, TPointArray::Raw,toleranceRect );
+    return KErrNotFound == LatestCertainPointIndex( aPoints, &TPointArray::Raw,toleranceRect );
     }  
     
 // ----------------------------------------------------------------------------
@@ -251,7 +251,7 @@ TGestureCode TGestureRecogniser::ValidateDrag( const TPointArray& aPoints, MGest
    
     TRect toleranceRect = ToleranceRect( (aPoints.TPointArray::operator[])(aPoints.Count() - 1), aRelevantAxis );
     
-    TInt latestPointIndex = LatestCertainPointIndex( aPoints, TPointArray::operator[],toleranceRect  );
+    TInt latestPointIndex = LatestCertainPointIndex( aPoints, &TPointArray::operator[],toleranceRect  );
     if ( KErrNotFound != latestPointIndex )
         {
         return EGestureDrag;
