@@ -73,7 +73,7 @@ public:
     * 
     * @param aEnv   Alf environment object
     */    
-    static void AlfWidgetEnvExtension::initializeEnvironmentForTheme(CAlfEnv& aEnv);
+    static void initializeEnvironmentForTheme(CAlfEnv& aEnv);
     
     /**
      * Initialize the singleton object for the widget factory required for 
