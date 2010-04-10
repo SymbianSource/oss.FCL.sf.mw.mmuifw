@@ -91,7 +91,7 @@ namespace mulvisualitem
 class IAlfMap;
 class IAlfContainer;
 class IMulVariantType;
-/**
+
 /*! @class MulVisualItem
  *  @brief Client need to use this class to add data in data model.
  *
