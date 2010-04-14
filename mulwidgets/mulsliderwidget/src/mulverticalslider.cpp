@@ -302,9 +302,9 @@ void MulSliderVertical::layoutVisuals( sliderTemplate /*aTemplateId*/)
     CAlfControl* ctrl = (CAlfControl*)&control();  
     TAknLayoutRect layoutRect;
     //get the lct rect for mBaseSliderLayout and set it            
-    // aaslider_pane(2)
+    // aaslider_pane(3)
     layoutRect = MulSliderUtils::GetComponentRect(
-            EVSliderPane,mData->mMainLayout,KVariety2);
+            EVSliderPane,mData->mMainLayout,KVariety3);
     mData->mBaseSliderLayout->SetRect(
             TRect( TPoint(layoutRect.Rect().iTl.iX,layoutRect.Rect().iTl.iY  ),
                     TSize( layoutRect.Rect().Size().iWidth, 

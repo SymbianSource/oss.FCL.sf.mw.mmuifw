@@ -275,8 +275,11 @@ TBool CGestureHelperImpl::HandlePointerEventL( const TPointerEvent& aEvent,
              
             // we shouldnot consider pointer number here. If pointer 1 is
             // already touched and dragging and we recieve a down of pointer 0     
-                    
-            if( iPointerCount == 1 )
+            if( iPointerCount == 0 && pointerNumber == 1)
+                {
+                return EFalse;                
+                }        
+            else if( iPointerCount == 1 )
                 {
                 if(iCurrentPointer == pointerNumber )
                     {

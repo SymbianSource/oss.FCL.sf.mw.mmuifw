@@ -231,11 +231,7 @@ void MulCoverFlowTemplate4::CreateLscStructure()
 	int mainPaneVerityId = 1;
 	int imagePaneVerityId = 6;
 	int videoPaneVerityId = 0;
-	int counterPaneVerityId = 6;
-	if(AknLayoutUtils::CbaLocation() == AknLayoutUtils::EAknCbaLocationRight)
-	    {
-	    counterPaneVerityId = 8;
-	    }
+	int counterPaneVerityId = 8;
 	
 	CAlfVisual* main = mData->mBaseElement->findVisual(KMainLayoutIndex);        
 	CAlfLayout* prntLay = main->Layout();

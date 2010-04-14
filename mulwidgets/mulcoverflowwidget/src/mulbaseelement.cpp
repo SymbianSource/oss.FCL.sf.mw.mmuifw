@@ -1249,14 +1249,15 @@ void MulBaseElement::SetNewCounterPosition( const TMulCoverFlowItem& aCounterLct
         	if (mData->mIsMirrored)
         		{
         		CAlfLayout* main  = (CAlfLayout*)findVisual( KMainLayoutIndex );
-				TSize topLayoutSize = main->Size().Target().AsSize();
+						TSize topLayoutSize = main->Size().Target().AsSize();
         		rightPosx = topLayoutSize.iWidth - aCounterLctDimension.posx ;
         		leftPosx = rightPosx - numOfPixels;
         		}
         	else
         		{
-        		rightPosx = aCounterLctDimension.posx + aCounterLctDimension.width; 
-        		leftPosx = rightPosx - numOfPixels;
+        		//rightPosx = aCounterLctDimension.posx + aCounterLctDimension.width; 
+        		//leftPosx = rightPosx - numOfPixels;
+        		leftPosx = aCounterLctDimension.posx;
         		}
 	   		mData->mCounterVisual->SetPos(TAlfRealPoint(leftPosx,aCounterLctDimension.posy));
 		    mData->mCounterVisual->SetSize(TAlfRealPoint(numOfPixels ,aCounterLctDimension.height));
