@@ -1231,6 +1231,7 @@ void MulBaseElement::SetNewCounterPosition( const TMulCoverFlowItem& aCounterLct
 	MulCoverFlowControl* coverflowControl = ((MulCoverFlowControl*)&control());
 	int totalModelCount = coverflowControl->TotalModelCount();
 	int currHighlightIndex = coverflowControl->HighlightIndex();
+	bool isLandScape = static_cast<MulCoverFlowControl&>(control()).IsLandscape();
     
     if( totalModelCount > 0 && currHighlightIndex >= 0 )
     	{
@@ -1248,16 +1249,28 @@ void MulBaseElement::SetNewCounterPosition( const TMulCoverFlowItem& aCounterLct
         	// if mirroring is enabled(ie for RTL Language)
         	if (mData->mIsMirrored)
         		{
-        		CAlfLayout* main  = (CAlfLayout*)findVisual( KMainLayoutIndex );
-						TSize topLayoutSize = main->Size().Target().AsSize();
-        		rightPosx = topLayoutSize.iWidth - aCounterLctDimension.posx ;
-        		leftPosx = rightPosx - numOfPixels;
+        			
+	        		CAlfLayout* main  = (CAlfLayout*)findVisual( KMainLayoutIndex );
+							TSize topLayoutSize = main->Size().Target().AsSize();
+							if(!isLandScape)
+        			{
+	        		rightPosx = topLayoutSize.iWidth - aCounterLctDimension.posx ;
+	        		leftPosx = rightPosx - numOfPixels;
+	        		}
+	        		else
+	        		{
+	        		leftPosx = topLayoutSize.iWidth - aCounterLctDimension.posx  ;
+	        		}
         		}
         	else
         		{
-        		//rightPosx = aCounterLctDimension.posx + aCounterLctDimension.width; 
-        		//leftPosx = rightPosx - numOfPixels;
-        		leftPosx = aCounterLctDimension.posx;
+        				if(!isLandScape)
+        					{
+        					rightPosx = aCounterLctDimension.posx + aCounterLctDimension.width; 
+        					leftPosx = rightPosx - numOfPixels;
+        					}
+        				else	
+        					leftPosx = aCounterLctDimension.posx;
         		}
 	   		mData->mCounterVisual->SetPos(TAlfRealPoint(leftPosx,aCounterLctDimension.posy));
 		    mData->mCounterVisual->SetSize(TAlfRealPoint(numOfPixels ,aCounterLctDimension.height));
