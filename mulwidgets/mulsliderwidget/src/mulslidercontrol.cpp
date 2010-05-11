@@ -248,7 +248,7 @@ void MulSliderControl::TactileEffectOnDrag(TAlfEvent& aEvent)
   {
     CCoeControl* ccoecntrl = static_cast<CCoeControl*>(Display()->ObjectProvider());
     TInt intensity = 50;
-    TTimeIntervalMicroSeconds32 timespan = 1000000;
+    TTimeIntervalMicroSeconds32 timespan = 400000;
     mTactilefdbInstance->StartFeedback(ccoecntrl,ETouchContinuousSlider,&aEvent.PointerEvent(),intensity,timespan);
     mDragTactileFeedbackStarted = true;
    }

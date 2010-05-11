@@ -1287,6 +1287,7 @@ void MulCoverFlowControl::HandleNormalGestureEvents( const MGestureEvent& aEvent
         	{
         	MUL_LOG_INFO("MUL::MulCoverFlowControl:HandleNormalGestureEvents EGestureTap ");
             HandleSingleTap(aEvent); 
+            mFeedback->InstantFeedback(ETouchFeedbackList);
             break;   
         	}
         
@@ -1317,7 +1318,7 @@ void MulCoverFlowControl::HandleNormalGestureEvents( const MGestureEvent& aEvent
                 }
             doubleTapData.mDoubleTapPoint = aEvent.CurrentPos();
             
-            mFeedback->InstantFeedback(ETouchFeedbackBasic); 
+            mFeedback->InstantFeedback(ETouchFeedbackList); 
             CAlfWidgetControl::processEvent ( TAlfEvent ( ETypeDoubleTap,
                     uint(&doubleTapData)));
             break;  
@@ -1367,6 +1368,7 @@ void MulCoverFlowControl::HandleNormalGestureEvents( const MGestureEvent& aEvent
            {
             MUL_LOG_INFO("MUL::MulCoverFlowControl:HandleNormalGestureEvents EGestureMultiTouchStart");
             mData->mBaseElement->StopDoodling(0);
+            mFeedback->InstantFeedback(ETouchFeedbackMultiTouchRecognized);
             break;
           }
         case EGestureMultiTouchReleased:
@@ -1379,8 +1381,7 @@ void MulCoverFlowControl::HandleNormalGestureEvents( const MGestureEvent& aEvent
         case EGestureReleased:
         	{
         	 MUL_LOG_INFO("MUL::MulCoverFlowControl:HandleNormalGestureEvents EGestureReleased");
-        	 mFeedback->InstantFeedback(ETouchFeedbackBasic);
-         	 break;
+        	 break;
 			}
         default:
             break;
@@ -1525,7 +1526,7 @@ void MulCoverFlowControl::SendFeedbackOnTouchDown(const MGestureEvent& aEvent)
     CAlfVisual* hitVisual = aEvent.Visual();
     if((hitVisual && hitVisual->Tag() == KCoverflowIcon) || (mData->mCoverFlow2DTemplate->IsUiOnOffFlagEnabled() )) 
         {
-        mFeedback->InstantFeedback(ETouchFeedbackBasic);  
+        mFeedback->InstantFeedback(ETouchFeedbackList);  
         }    
     }
 // ---------------------------------------------------------------------------
@@ -1586,9 +1587,10 @@ void MulCoverFlowControl::HandleSwipe(int aEvent)
 		HandleNavigationEvent( event );
 		env.SetRefreshMode(oldRefreshMode);			
 		}
-	// Commented feedback for swipe event
-	//mFeedback->InstantFeedback(ETouchFeedbackBasic);
+	
 	HandleNavigationEvent( event );
+	// Feedback for swipe event
+	mFeedback->InstantFeedback(ETouchFeedbackList);
     }
 
 // ---------------------------------------------------------------------------	
