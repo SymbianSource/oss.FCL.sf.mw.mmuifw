@@ -40,11 +40,12 @@ namespace Alf
 	     SliderLCTIDs aId,CAlfLayout *aLayout,int aVariety)
 	 {
 	 	TAknLayoutRect layoutRect;
-    
-		TRect rect2(0,
-		           0,
-		           aLayout->Size().iX.ValueNow(),
-		           aLayout->Size().iY.ValueNow());
+	 	TPoint layoutRectSize = aLayout->Size().IntValueNow();
+	 	    
+	 	TRect rect2(0,
+	 	           0,
+	 	           layoutRectSize.iX,
+	 	           layoutRectSize.iY);
 		switch(aId)
 		    {
 			case EVSliderPane:  

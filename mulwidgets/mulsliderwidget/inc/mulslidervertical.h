@@ -26,6 +26,7 @@
 #include "alf/alfelement.h"
 #include <alf/alfimagevisual.h>
 #include <alf/alflayout.h>
+#include <alf/alftexture.h>
 #include <mul/imulsliderwidget.h>
 
 #include <alf/ialfwidgeteventhandler.h>
@@ -52,7 +53,6 @@ namespace Alf
 class IAlfWidgetEventHandler;
 class CAlfWidgetControl;
 class MulSliderLongTapTimer;
-
 
 /**
  * Default Base Element of the Scrollbar.
@@ -354,6 +354,12 @@ private:
     * trackVisualHit  
     */
     AlfEventStatus trackVisualHit(CAlfVisual * aHitVisual);
+    
+    /**
+     * Texture for Visuals of slider. 
+     * 
+     */
+    TAlfImage skinTexture(TSize aPrtImageSize, TSize aLscImageSize, TInt aPrtSkinId, TInt aLscSkinId );
     
 private: // Class Data
     

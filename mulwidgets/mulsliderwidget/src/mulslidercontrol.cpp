@@ -82,10 +82,11 @@ MulSliderControl::~MulSliderControl()
 //
 void MulSliderControl::VisualLayoutUpdated(CAlfVisual& aVisual)
     {
-    if((mLayoutWidth == -1 && roundFloatToInt(
-        aVisual.Size().ValueNow().iX) == 0) ||
-        (mLayoutHeight == -1 && roundFloatToInt(
-            aVisual.Size().ValueNow().iY) == 0))
+    
+    TPoint visualSize = aVisual.Size().IntValueNow();
+    
+    if((mLayoutWidth == -1 && visualSize.iX) == 0 || 
+        (mLayoutHeight == -1 && visualSize.iY) == 0)           
         {
         //return; /*No size assigned yet*/
         }
@@ -94,8 +95,8 @@ void MulSliderControl::VisualLayoutUpdated(CAlfVisual& aVisual)
         //do nothing
         }   
 
-    if(mLayoutWidth == roundFloatToInt(aVisual.Size().ValueNow().iX)  && 
-        mLayoutHeight == roundFloatToInt(aVisual.Size().ValueNow().iY))
+    if(mLayoutWidth == visualSize.iX  && 
+        mLayoutHeight == visualSize.iY) 
         {
         //return; /* No change in layout size */
         }
@@ -104,8 +105,8 @@ void MulSliderControl::VisualLayoutUpdated(CAlfVisual& aVisual)
         //do nothing
         }
 
-    mLayoutWidth = roundFloatToInt(aVisual.Size().ValueNow().iX);
-    mLayoutHeight = roundFloatToInt(aVisual.Size().ValueNow().iY);
+    mLayoutWidth = visualSize.iX; 
+    mLayoutHeight = visualSize.iY;
     IAlfElement* baseelement = findElement ("BaseElement");
     IMulSliderBaseElementInternal* elementInternal = 
         static_cast<IMulSliderBaseElementInternal*> (

@@ -795,7 +795,15 @@ void MulCoverFlowControl::ModelStateChanged( TMulChangedState aState, IMulVarian
 void MulCoverFlowControl::HandleLessItemsUpdate(int aIndex)
 	{
 	MUL_LOG_ENTRY_EXIT("MUL:MulCoverFlowControl::HandleLessItemsUpdate");
-	if(aIndex == mData->mHighlightIndex)
+
+	int highlight = mData->mHighlightIndex;
+    IMulModelAccessor* accessor = static_cast<IMulModelAccessor*>(widget()->model());
+    if(accessor)
+        {
+        highlight = accessor->Highlight();
+        }
+    
+	if(aIndex == highlight)
 		{
 		UpdateCoverflowItem(aIndex,mData->mNumVisibleItem);
 		if(mData->mNumVisibleItem != 1 && TotalModelCount() == 3)	
@@ -817,11 +825,11 @@ void MulCoverFlowControl::HandleLessItemsUpdate(int aIndex)
 			// 2d template landscape mode
 			if(TotalModelCount() == 2)
 				{
-				UpdateCoverflowItem(aIndex,mData->mNumVisibleItem+(aIndex - mData->mHighlightIndex));	
+				UpdateCoverflowItem(aIndex,mData->mNumVisibleItem+(aIndex - highlight));	
 				}
 			else
 				{
-				int relativeIndex = (aIndex - mData->mHighlightIndex) + mData->mNumVisibleItem;
+				int relativeIndex = (aIndex - highlight) + mData->mNumVisibleItem;
 				if(relativeIndex >= 0 && relativeIndex < 2*mData->mNumVisibleItem+1)
 					{
 					UpdateCoverflowItem(aIndex,relativeIndex);						
@@ -832,7 +840,7 @@ void MulCoverFlowControl::HandleLessItemsUpdate(int aIndex)
 					UpdateCoverflowItem(aIndex,relativeIndex);	
 					}
 								
-				relativeIndex = mData->mNumVisibleItem - (TotalModelCount() - aIndex + mData->mHighlightIndex);
+				relativeIndex = mData->mNumVisibleItem - (TotalModelCount() - aIndex + highlight);
 				if(relativeIndex >= 0 && relativeIndex < 2*mData->mNumVisibleItem+1)
 					{
 					UpdateCoverflowItem(aIndex,relativeIndex);					
@@ -858,23 +866,29 @@ bool MulCoverFlowControl::IsIndexInVisibleWindow(const int aIndex, int& aRelativ
 	int totalVisual = TotalModelCount();
     int noOfVisuals = mData->mNumVisibleItem; 
     int highlightRelativeIndex = mData->mNumVisibleItem;
-    	
-	int leftIndex = mData->mHighlightIndex - noOfVisuals;
-	int rightIndex = mData->mHighlightIndex + noOfVisuals;
+    int highlight = mData->mHighlightIndex;
+    IMulModelAccessor* accessor = static_cast<IMulModelAccessor*>(widget()->model());
+    if(accessor)
+        {
+        highlight = accessor->Highlight();
+        }
+
+	int leftIndex = highlight - noOfVisuals;
+	int rightIndex = highlight + noOfVisuals;
     
  	if (leftIndex >= 0)
 	 	{
-	 	if ((aIndex <= mData->mHighlightIndex) && (aIndex >= leftIndex))
+	 	if ((aIndex <= highlight) && (aIndex >= leftIndex))
 		 	{
-		 	aRelativeIndex = highlightRelativeIndex - (mData->mHighlightIndex - aIndex);
+		 	aRelativeIndex = highlightRelativeIndex - (highlight - aIndex);
 		 	return true;	
 		 	}
 	 	}
 	else
 		{
-		if (aIndex <= mData->mHighlightIndex)
+		if (aIndex <= highlight)
 			{
-			aRelativeIndex = highlightRelativeIndex - (mData->mHighlightIndex - aIndex);
+			aRelativeIndex = highlightRelativeIndex - (highlight - aIndex);
 			return true;	
 			}
 		else
@@ -890,17 +904,17 @@ bool MulCoverFlowControl::IsIndexInVisibleWindow(const int aIndex, int& aRelativ
  
  	if (rightIndex < totalVisual)
 	 	{
-	 	if ((aIndex >= mData->mHighlightIndex) && (aIndex <= rightIndex))
+	 	if ((aIndex >= highlight) && (aIndex <= rightIndex))
 		 	{
-		 	aRelativeIndex = highlightRelativeIndex + (aIndex - mData->mHighlightIndex);
+		 	aRelativeIndex = highlightRelativeIndex + (aIndex - highlight);
 		 	return true;	
 		 	}
 	 	}
 	else
 		{
-		if (aIndex >= mData->mHighlightIndex)
+		if (aIndex >= highlight)
 			{
-			aRelativeIndex = highlightRelativeIndex + (aIndex - mData->mHighlightIndex);
+			aRelativeIndex = highlightRelativeIndex + (aIndex - highlight);
 			return true;	
 			}
 		rightIndex = rightIndex - totalVisual;
@@ -925,6 +939,14 @@ int MulCoverFlowControl::RelativeToAbsolute(const int aRelativeIndex)
     int highlightRelativeIndex = mData->mNumVisibleItem;
     int absolute = -1;
     int totalVisuals = TotalModelCount();
+    
+    int highlight = mData->mHighlightIndex;
+    IMulModelAccessor* accessor = static_cast<IMulModelAccessor*>(widget()->model());
+    if(accessor)
+        {
+        highlight = accessor->Highlight();
+        }
+    
     if(totalVisuals <= 0)
 	    {
 	    // absolute index is always -1, so no need of any calculations
@@ -933,7 +955,7 @@ int MulCoverFlowControl::RelativeToAbsolute(const int aRelativeIndex)
 	    {
 	    if(aRelativeIndex == highlightRelativeIndex)
 			{
-			absolute = 	mData->mHighlightIndex;
+			absolute = 	highlight;
 			}
 		else
 			{
@@ -945,7 +967,7 @@ int MulCoverFlowControl::RelativeToAbsolute(const int aRelativeIndex)
 				    }
 				else if(totalVisuals == 2)
 					{
-					absolute = mData->mHighlightIndex + 1;
+					absolute = highlight + 1;
 					absolute = absolute >= totalVisuals ? 0 : absolute;
 					}
 				}
@@ -957,18 +979,18 @@ int MulCoverFlowControl::RelativeToAbsolute(const int aRelativeIndex)
 				    }
 				else if(totalVisuals == 2)
 					{
-					absolute = mData->mHighlightIndex + (aRelativeIndex - highlightRelativeIndex);
+					absolute = highlight + (aRelativeIndex - highlightRelativeIndex);
 					absolute = absolute >= totalVisuals ? -1 : absolute;
 					}
 				else // totalvisuals > 3
 					{
 					if(aRelativeIndex - highlightRelativeIndex > 0)
 						{
-						absolute = mData->mHighlightIndex + aRelativeIndex - highlightRelativeIndex;	
+						absolute = highlight + aRelativeIndex - highlightRelativeIndex;	
 						}
 					else
 						{
-						absolute = mData->mHighlightIndex + aRelativeIndex - highlightRelativeIndex
+						absolute = highlight + aRelativeIndex - highlightRelativeIndex
 							+ TotalModelCount();	
 						}					
 					absolute = absolute >= totalVisuals ? absolute - totalVisuals : absolute;
@@ -980,16 +1002,16 @@ int MulCoverFlowControl::RelativeToAbsolute(const int aRelativeIndex)
 		{
 		if(aRelativeIndex == highlightRelativeIndex)
 			{
-			absolute = 	mData->mHighlightIndex;
+			absolute = highlight;
 			}
 		else if (aRelativeIndex > highlightRelativeIndex)
 		    {
-		    absolute = mData->mHighlightIndex + (aRelativeIndex - highlightRelativeIndex);
+		    absolute = highlight + (aRelativeIndex - highlightRelativeIndex);
 		    absolute = absolute >= totalVisuals ? (absolute - totalVisuals) : absolute;	
 		    }
 		else
 			{
-		    absolute = mData->mHighlightIndex - (highlightRelativeIndex - aRelativeIndex);
+		    absolute = highlight - (highlightRelativeIndex - aRelativeIndex);
 		    absolute = absolute <0 ? (totalVisuals + absolute) : absolute;
 		    absolute = absolute > totalVisuals - 1 ? -1 : absolute;	    
 			}	
@@ -1059,8 +1081,9 @@ void MulCoverFlowControl::ModelChanged( IMulModelAccessor* aAccessor )
 	mData->mHighlightIndex = aAccessor->Highlight();
 
 	CAlfLayout* main = (CAlfLayout*) mData->mBaseElement->findVisual( KMainLayoutIndex );
-	int width = main->Size().Target().AsSize().iWidth;
-	int height = main->Size().Target().AsSize().iHeight;
+	TSize mainSize = main->Size().Target().AsSize();
+	int width = mainSize.iWidth;
+	int height = mainSize.iHeight;
 
 	if( width == 0 && height == 0 )
 		{

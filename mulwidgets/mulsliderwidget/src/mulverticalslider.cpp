@@ -26,7 +26,7 @@
 #include <alf/alfbrusharray.h>
 #include <alf/alftextvisual.h>
 #include <alf/alfevent.h>
-//#include <osn/alfptrvector.h>
+#include <alf/alftexture.h>
 #include <alf/alfframebrush.h>
 
 //Widget Model Includes
@@ -67,6 +67,18 @@ struct MulVerticalSliderDataImpl
     CAlfVisual * mVisual;// Stores the current visual hit 
     TPoint mDragPoint;// Point at which drag started 
     TPoint mLongTapPos;// Point at which button down happened 
+    TSize mTrackTopImageSizePrt;
+    TSize mTrackTopImageSizeLsc;
+    TSize mTrackMiddleImageSizePrt;
+    TSize mTrackMiddleImageSizeLsc;
+    TSize mTrackBottomImageSizePrt;
+    TSize mTrackBottomImageSizeLsc;
+    TSize mSliderHandleSizePrt;
+    TSize mSliderHandleSizeLsc;
+    TSize mImagePlusSizePrt;
+    TSize mImagePlusSizeLsc;
+    TSize mImageMinusSizePrt;
+    TSize mImageMinusSizeLsc;
     int mDragStartStep;// Tick positon of Drag Start
     int mCurrTick;// Stores current tick
     int mTick;// Stores Tick Size
@@ -77,12 +89,19 @@ struct MulVerticalSliderDataImpl
     int mdirection;// 0 - nomovement,1 up movement 2 down
     bool mLayoutMirrored;// RTL if True else LTR
     int mImageTextureId; // to differtiate between textures 
-    int mTrackTopTextureId ;// to store the auto generated texture id's
-    int mTrackBottomTextureId;
-    int mTrackMiddleTextureId;
-    int mMarkerTextureId;
-    int mZoomInTextureId;
-    int mZoomOutTextureId;
+    int mTrackTopTexturePrtId ;// to store the auto generated texture id's
+    int mTrackTopTextureLscId;
+    int mTrackBottomTexturePrtId;
+    int mTrackBottomTextureLscId;
+    int mTrackMiddleTextureLscId;
+    int mTrackMiddleTexturePrtId;
+    int mMarkerTextureLscId;
+    int mMarkerTexturePrtId;
+    int mZoomInTexturePrtId;
+    int mZoomInTextureLscId; 
+    int mZoomOutTexturePrtId;
+    int mZoomOutTextureLscId;
+    
     
     CAlfLayout* mMainLayout;
     CAlfLayout* mBaseSliderLayout;// Slider Background
@@ -114,12 +133,18 @@ struct MulVerticalSliderDataImpl
         mTick = 0;
         mTrackStartPoint = 0;
         mImageTextureId = 0;
-        mTrackTopTextureId = 0;
-        mTrackBottomTextureId = 0;
-        mTrackMiddleTextureId = 0;
-        mMarkerTextureId = 0;
-        mZoomInTextureId = 0;
-        mZoomOutTextureId = 0;
+        mTrackTopTexturePrtId = 0;
+        mTrackTopTextureLscId = 0;
+        mTrackBottomTexturePrtId = 0;
+        mTrackBottomTextureLscId = 0;
+        mTrackMiddleTexturePrtId = 0;
+        mTrackMiddleTextureLscId = 0;
+        mMarkerTexturePrtId = 0;
+        mMarkerTextureLscId = 0;
+        mZoomInTexturePrtId = 0;
+        mZoomInTextureLscId = 0;
+        mZoomOutTexturePrtId = 0;
+        mZoomOutTextureLscId = 0;
         mMainLayout = NULL;
         mBaseSliderLayout = NULL;
         mSliderCentre = NULL;
@@ -137,6 +162,18 @@ struct MulVerticalSliderDataImpl
         mdirection = 0;
         mLayoutMirrored = false;
         mHasBackground = false;
+        mTrackTopImageSizePrt.SetSize(0,0);
+        mTrackTopImageSizeLsc.SetSize(0,0);
+        mTrackBottomImageSizePrt.SetSize(0,0);
+        mTrackBottomImageSizeLsc.SetSize(0,0);
+        mTrackMiddleImageSizePrt.SetSize(0,0);
+        mTrackMiddleImageSizeLsc.SetSize(0,0);
+        mSliderHandleSizePrt.SetSize(0,0);
+        mSliderHandleSizeLsc.SetSize(0,0);
+        mImagePlusSizePrt.SetSize(0,0);
+        mImagePlusSizeLsc.SetSize(0,0);
+        mImageMinusSizePrt.SetSize(0,0);
+        mImageMinusSizeLsc.SetSize(0,0);
         } 
 
     };
@@ -183,13 +220,20 @@ MulSliderVertical::~MulSliderVertical()
     // Visualization Data
     if(mData)
         {
-        (&control().Env())->TextureManager().UnloadTexture(mData->mTrackTopTextureId);
-        (&control().Env())->TextureManager().UnloadTexture(mData->mTrackBottomTextureId);
-        (&control().Env())->TextureManager().UnloadTexture(mData->mTrackTopTextureId);
-        (&control().Env())->TextureManager().UnloadTexture(mData->mMarkerTextureId);
-        (&control().Env())->TextureManager().UnloadTexture(mData->mZoomInTextureId);
-        (&control().Env())->TextureManager().UnloadTexture(mData->mZoomOutTextureId);
-        delete mData;
+            CAlfTextureManager& txtmanager = control().Env().TextureManager();
+            txtmanager.UnloadTexture(mData->mTrackTopTextureLscId);
+            txtmanager.UnloadTexture(mData->mTrackTopTexturePrtId);
+            txtmanager.UnloadTexture(mData->mTrackMiddleTextureLscId);
+            txtmanager.UnloadTexture(mData->mTrackMiddleTexturePrtId);
+            txtmanager.UnloadTexture(mData->mTrackBottomTextureLscId);
+            txtmanager.UnloadTexture(mData->mTrackBottomTexturePrtId);
+            txtmanager.UnloadTexture(mData->mMarkerTexturePrtId);
+            txtmanager.UnloadTexture(mData->mMarkerTextureLscId);
+            txtmanager.UnloadTexture(mData->mZoomInTexturePrtId);
+            txtmanager.UnloadTexture(mData->mZoomInTextureLscId);
+            txtmanager.UnloadTexture(mData->mZoomOutTexturePrtId);
+            txtmanager.UnloadTexture(mData->mZoomOutTextureLscId);
+            delete mData;
         }
     else
         {
@@ -309,6 +353,7 @@ void MulSliderVertical::layoutVisuals( sliderTemplate /*aTemplateId*/)
             TRect( TPoint(layoutRect.Rect().iTl.iX,layoutRect.Rect().iTl.iY  ),
                     TSize( layoutRect.Rect().Size().iWidth, 
                             layoutRect.Rect().Size().iHeight ))) ;
+        
    if(!mData->mHasBackground)
             SetBackgroundBrush();
     // Set Position and Size for Extended touch layout for track
@@ -318,26 +363,66 @@ void MulSliderVertical::layoutVisuals( sliderTemplate /*aTemplateId*/)
                             layoutRect.Rect().Size().iHeight )));
 
 
-    //get the lct rect for mImageMinus and set it            
-    // aid_touch_size_slider_min(2) 
+    //get the lct rect for mSliderCentre and set it     
+    //aaslider_bg_pane_cp001(6)
     layoutRect = MulSliderUtils::GetComponentRect(
-            EVSliderMinus,mData->mBaseSliderLayout,KVariety2);
-    mData->mImageMinus->SetRect(
-            TRect( TPoint( layoutRect.Rect().iTl.iX,layoutRect.Rect().iTl.iY ),
-                    TSize( layoutRect.Rect().Size().iWidth, 
-                            layoutRect.Rect().Size().iHeight ))) ;
-
-    //get the lct rect for mImagePlus and set it            
-    // aid_touch_size_slider_max(1) 
-    layoutRect = MulSliderUtils::GetComponentRect(
-            EVSliderPlus,
+            EVSliderBgPane,
             mData->mBaseSliderLayout,
-            KVariety1);
-    mData->mImagePlus->SetRect(
-            TRect( TPoint( layoutRect.Rect().iTl.iX,layoutRect.Rect().iTl.iY ),
+            KVariety6);
+    
+    mData->mSliderCentre->SetRect(
+            TRect( TPoint( layoutRect.Rect().iTl.iX ,
+                    layoutRect.Rect().iTl.iY),
                     TSize( layoutRect.Rect().Size().iWidth, 
-                            layoutRect.Rect().Size().iHeight ))) ;
+                            layoutRect.Rect().Size().iHeight )));
 
+    //get the lct rect for mTrackTopImage and set it     
+    //aaslider_bg_pane_cp001_g1(0)
+    layoutRect = MulSliderUtils::GetComponentRect(
+            EVSliderTop,
+            mData->mSliderCentre,
+            KVariety0);
+    
+    mData->mTrackTopImage->SetRect(
+            TRect( TPoint(0,layoutRect.Rect().iTl.iY),
+                    TSize( layoutRect.Rect().Size().iWidth, 
+                            layoutRect.Rect().Size().iHeight )));
+    
+    mSliderModel->IsLandscape() ? mData->mTrackTopImageSizeLsc = layoutRect.Rect().Size():    
+                                  mData->mTrackTopImageSizePrt = layoutRect.Rect().Size();    
+
+    //get the lct rect for mTrackMiddleImage and set it     
+    //aaslider_bg_pane_cp001_g3(0)
+    layoutRect = MulSliderUtils::GetComponentRect(
+            EVSliderMiddle,
+            mData->mSliderCentre,
+            KVariety0);
+    mData->mTrackMiddleImage->SetRect(
+            TRect( TPoint( 0,layoutRect.Rect().iTl.iY),
+                    TSize( layoutRect.Rect().Size().iWidth, 
+                            layoutRect.Rect().Size().iHeight )));
+
+    mSliderModel->IsLandscape() ? mData->mTrackMiddleImageSizeLsc = layoutRect.Rect().Size():    
+                                  mData->mTrackMiddleImageSizePrt = layoutRect.Rect().Size();    
+    //get the lct rect for mTrackEndImage and set it     
+    //aaslider_bg_pane_cp001_g2(0)
+    layoutRect = MulSliderUtils::GetComponentRect(
+            EVSliderEnd,
+            mData->mSliderCentre,
+            KVariety0);
+    mData->mTrackEndImage->SetRect(
+            TRect( TPoint(0,layoutRect.Rect().iTl.iY),
+                    TSize( layoutRect.Rect().Size().iWidth, 
+                            layoutRect.Rect().Size().iHeight )));
+    mSliderModel->IsLandscape() ? mData->mTrackBottomImageSizeLsc = layoutRect.Rect().Size():    
+                                  mData->mTrackBottomImageSizePrt = layoutRect.Rect().Size();
+  
+    if(mData->mTrackTopImage && mData->mTrackMiddleImage && mData->mTrackEndImage)
+       {
+        setTrackImage();
+       }
+
+    
     //get the lct rect for mSliderHandle and set it     
     //aid_touch_size_slider_marker(5)
     layoutRect = MulSliderUtils::GetComponentRect(
@@ -348,6 +433,8 @@ void MulSliderVertical::layoutVisuals( sliderTemplate /*aTemplateId*/)
             TRect( TPoint( layoutRect.Rect().iTl.iX,layoutRect.Rect().iTl.iY ),
                     TSize( layoutRect.Rect().Size().iWidth, 
                             layoutRect.Rect().Size().iHeight ))) ;
+    mSliderModel->IsLandscape() ? mData->mSliderHandleSizeLsc = layoutRect.Rect().Size():    
+                                  mData->mSliderHandleSizePrt = layoutRect.Rect().Size();
     
     layoutRect = MulSliderUtils::GetComponentRect(
                 EVSliderMarkerExtended,
@@ -363,94 +450,51 @@ void MulSliderVertical::layoutVisuals( sliderTemplate /*aTemplateId*/)
                     mData->mHandleGhostHieghtDelta/2),
                     TSize( mData->mBaseSliderLayout->Size().iX.ValueNow(), 
                             layoutRect.Rect().Size().iHeight)));
-
-    //get the lct rect for mSliderCentre and set it     
-    //aaslider_bg_pane_cp001(6)
-    layoutRect = MulSliderUtils::GetComponentRect(
-            EVSliderBgPane,
-            mData->mBaseSliderLayout,
-            KVariety6);
-    mData->mSliderCentre->SetRect(
-            TRect( TPoint( layoutRect.Rect().iTl.iX ,
-                    layoutRect.Rect().iTl.iY),
-                    TSize( layoutRect.Rect().Size().iWidth, 
-                            layoutRect.Rect().Size().iHeight )));
-
-    //get the lct rect for mTrackTopImage and set it     
-    //aaslider_bg_pane_cp001_g1(0)
-    layoutRect = MulSliderUtils::GetComponentRect(
-            EVSliderTop,
-            mData->mSliderCentre,
-            KVariety0);
-    mData->mTrackTopImage->SetRect(
-            TRect( TPoint(0,layoutRect.Rect().iTl.iY),
-                    TSize( layoutRect.Rect().Size().iWidth, 
-                            layoutRect.Rect().Size().iHeight )));
-
-    //get the lct rect for mTrackMiddleImage and set it     
-    //aaslider_bg_pane_cp001_g3(0)
-    layoutRect = MulSliderUtils::GetComponentRect(
-            EVSliderMiddle,
-            mData->mSliderCentre,
-            KVariety0);
-    mData->mTrackMiddleImage->SetRect(
-            TRect( TPoint( 0,layoutRect.Rect().iTl.iY),
-                    TSize( layoutRect.Rect().Size().iWidth, 
-                            layoutRect.Rect().Size().iHeight )));
-
-    //get the lct rect for mTrackEndImage and set it     
-    //aaslider_bg_pane_cp001_g2(0)
-    layoutRect = MulSliderUtils::GetComponentRect(
-            EVSliderEnd,
-            mData->mSliderCentre,
-            KVariety0);
-    mData->mTrackEndImage->SetRect(
-            TRect( TPoint(0,layoutRect.Rect().iTl.iY),
-                    TSize( layoutRect.Rect().Size().iWidth, 
-                            layoutRect.Rect().Size().iHeight )));
-  
-    if(mData->mTrackTopImage && 
-                    mData->mTrackMiddleImage && 
-                    mData->mTrackEndImage)
-                {
-                setTrackImage();
-                }
+    
     if(mData->mSliderHandle)
         {
         mData->mImageTextureId = KAlfMarkerTextureId;
         // Create the texture from bitmap provider
-        mData->mTexture = &((ctrl->Env()).TextureManager().CreateTextureL(
-                KAlfAutoGeneratedTextureId/*KAlfMarkerTextureId*/,
-                (MAlfBitmapProvider *)this,
-                (TAlfTextureFlags)(EAlfTextureFlagRetainResolution|
-                                   EAlfTextureFlagSkinContent)));
-        TAlfImage aImage(*mData->mTexture );                                                
-        mData->mSliderHandle->SetImage(aImage);
-
+        mData->mSliderHandle->SetImage( skinTexture(mData->mSliderHandleSizePrt ,mData->mSliderHandleSizeLsc , mData->mMarkerTexturePrtId, mData->mMarkerTextureLscId ) );
         }
 
+    //get the lct rect for mImagePlus and set it            
+    // aid_touch_size_slider_max(1) 
+    layoutRect = MulSliderUtils::GetComponentRect(
+            EVSliderPlus,
+            mData->mBaseSliderLayout,
+            KVariety1);
+    mData->mImagePlus->SetRect(
+            TRect( TPoint( layoutRect.Rect().iTl.iX,layoutRect.Rect().iTl.iY ),
+                    TSize( layoutRect.Rect().Size().iWidth, 
+                            layoutRect.Rect().Size().iHeight ))) ;
+    
+    mSliderModel->IsLandscape() ? mData->mImagePlusSizeLsc = layoutRect.Rect().Size():    
+                                  mData->mImagePlusSizePrt = layoutRect.Rect().Size();
     if(mData->mImagePlus)
         {
         mData->mImageTextureId = KAlfZoomInTextureId;
         // Create the texture from bitmap provider
-        mData->mTexture = &((ctrl->Env()).TextureManager().CreateTextureL(
-                KAlfAutoGeneratedTextureId/*KAlfZoomInTextureId*/,
-                (MAlfBitmapProvider *)this,
-                (TAlfTextureFlags)(EAlfTextureFlagRetainResolution|EAlfTextureFlagSkinContent)));
-        TAlfImage aImage(*mData->mTexture );
-        mData->mImagePlus->SetImage(aImage);
+        mData->mImagePlus->SetImage(skinTexture(mData->mImagePlusSizePrt ,mData->mImagePlusSizeLsc , mData->mZoomInTexturePrtId, mData->mZoomInTextureLscId ));
         }
 
+    //get the lct rect for mImageMinus and set it            
+    // aid_touch_size_slider_min(2) 
+    layoutRect = MulSliderUtils::GetComponentRect(
+            EVSliderMinus,mData->mBaseSliderLayout,KVariety2);
+    
+    mData->mImageMinus->SetRect(
+            TRect( TPoint( layoutRect.Rect().iTl.iX,layoutRect.Rect().iTl.iY ),
+                    TSize( layoutRect.Rect().Size().iWidth, 
+                            layoutRect.Rect().Size().iHeight ))) ;
+
+    mSliderModel->IsLandscape() ? mData->mImageMinusSizeLsc = layoutRect.Rect().Size():    
+                                  mData->mImageMinusSizePrt = layoutRect.Rect().Size();
     if(mData->mImageMinus)
         {
         mData->mImageTextureId = KAlfZoomOutTextureId;
         // Create the texture from bitmap provider
-        mData->mTexture = &((ctrl->Env()).TextureManager().CreateTextureL(
-                KAlfAutoGeneratedTextureId/*KAlfZoomOutTextureId*/,
-                (MAlfBitmapProvider *)this,
-                (TAlfTextureFlags)(EAlfTextureFlagRetainResolution|EAlfTextureFlagSkinContent)));
-        TAlfImage aImage(*mData->mTexture );
-        mData->mImageMinus->SetImage(aImage);
+        mData->mImageMinus->SetImage(skinTexture(mData->mImageMinusSizePrt ,mData->mImageMinusSizeLsc , mData->mZoomOutTexturePrtId, mData->mZoomOutTextureLscId ));
 
         }
     }
@@ -462,41 +506,19 @@ void MulSliderVertical::layoutVisuals( sliderTemplate /*aTemplateId*/)
 
 void MulSliderVertical::setTrackImage()
     {
-    //Review
-    TInt flags = EAlfTextureFlagSkinContent;
-    flags |= EAlfTextureFlagAutoSize;
 
-    CAlfControl* ctrl = (CAlfControl*)&control();
-    //creating texture for topimage
-    mData->mImageTextureId = KAlfTrackTopTextureId;
-    mData->mTexture = &((ctrl->Env()).TextureManager().CreateTextureL(
-        KAlfAutoGeneratedTextureId/*KAlfTrackTopTextureId*/,
-        (MAlfBitmapProvider *)this,
-        (TAlfTextureFlags)(EAlfTextureFlagRetainResolution|EAlfTextureFlagSkinContent)));
-
-    TAlfImage trackTopImage(*mData->mTexture );
-    //creating texture for middleimage
-    mData->mImageTextureId = KAlfTrackMiddleTextureId;
-    mData->mTexture = &((ctrl->Env()).TextureManager().CreateTextureL(
-        KAlfAutoGeneratedTextureId/*KAlfTrackMiddleTextureId*/,
-        (MAlfBitmapProvider *)this,
-        (TAlfTextureFlags)(EAlfTextureFlagRetainResolution|EAlfTextureFlagSkinContent)));
-
-    TAlfImage trackMiddleImage(*mData->mTexture );
-
-    //creating texture for bottom image
-    mData->mImageTextureId = KAlfTrackBottomTextureId;
-    mData->mTexture = &((ctrl->Env()).TextureManager().CreateTextureL(
-        KAlfAutoGeneratedTextureId/*KAlfTrackBottomTextureId*/,
-        (MAlfBitmapProvider *)this,
-        (TAlfTextureFlags)(EAlfTextureFlagDefault)));
-
-
-    TAlfImage trackEndImage(*mData->mTexture );
-    // Set Image on visuals
-    mData->mTrackTopImage->SetImage(trackTopImage);
-    mData->mTrackMiddleImage->SetImage(trackMiddleImage);                    
-    mData->mTrackEndImage->SetImage(trackEndImage);
+        CAlfControl* ctrl = (CAlfControl*)&control();
+        //creating texture for topimage
+        mData->mImageTextureId = KAlfTrackTopTextureId;
+        mData->mTrackTopImage->SetImage( skinTexture(mData->mTrackTopImageSizePrt ,mData->mTrackTopImageSizeLsc , mData->mTrackTopTexturePrtId, mData->mTrackTopTextureLscId ) ) ;
+        
+        //creating texture for middleimage
+        mData->mImageTextureId = KAlfTrackMiddleTextureId;
+        mData->mTrackMiddleImage->SetImage(skinTexture(mData->mTrackMiddleImageSizePrt ,mData->mTrackMiddleImageSizeLsc , mData->mTrackMiddleTexturePrtId, mData->mTrackMiddleTextureLscId ));
+        
+        //creating texture for bottom image
+        mData->mImageTextureId = KAlfTrackBottomTextureId;
+        mData->mTrackEndImage->SetImage( skinTexture(mData->mTrackBottomImageSizePrt ,mData->mTrackBottomImageSizeLsc , mData->mTrackBottomTexturePrtId, mData->mTrackBottomTextureLscId ) );
 
     }//End of setImage
  
@@ -528,7 +550,8 @@ void MulSliderVertical::ProvideBitmapL (TInt aId, CFbsBitmap *& aBitmap, CFbsBit
                                 layoutRect.Rect().Size().iHeight),
                                 EAspectRatioNotPreserved);
             mData->mImageTextureId = 0;
-            mData->mTrackTopTextureId = aId;
+            mSliderModel->IsLandscape() ? mData->mTrackTopTextureLscId = aId :
+                                          mData->mTrackTopTexturePrtId = aId ;
             }
             break;
         case KAlfTrackBottomTextureId:
@@ -549,7 +572,8 @@ void MulSliderVertical::ProvideBitmapL (TInt aId, CFbsBitmap *& aBitmap, CFbsBit
                                     layoutRect.Rect().Size().iHeight),
                                     EAspectRatioNotPreserved);
             mData->mImageTextureId = 0;
-            mData->mTrackBottomTextureId = aId;
+            mSliderModel->IsLandscape() ?   mData->mTrackBottomTextureLscId = aId :
+                                            mData->mTrackBottomTexturePrtId = aId ;     
             }
             break;
         case KAlfTrackMiddleTextureId:
@@ -572,7 +596,8 @@ void MulSliderVertical::ProvideBitmapL (TInt aId, CFbsBitmap *& aBitmap, CFbsBit
                                    EAspectRatioNotPreserved);
 
             mData->mImageTextureId = 0;
-            mData->mTrackMiddleTextureId = aId;
+            mSliderModel->IsLandscape() ? mData->mTrackMiddleTextureLscId = aId :
+                                          mData->mTrackMiddleTexturePrtId = aId ;
             }
             break;
 
@@ -596,7 +621,8 @@ void MulSliderVertical::ProvideBitmapL (TInt aId, CFbsBitmap *& aBitmap, CFbsBit
                                      EAspectRatioNotPreserved);
 
             mData->mImageTextureId = 0;
-            mData->mMarkerTextureId = aId;
+            mSliderModel->IsLandscape() ? mData->mMarkerTextureLscId = aId :
+                                          mData->mMarkerTexturePrtId = aId ;
             }
             break;
         case KAlfZoomInTextureId:
@@ -616,7 +642,8 @@ void MulSliderVertical::ProvideBitmapL (TInt aId, CFbsBitmap *& aBitmap, CFbsBit
                                   layoutRect.Rect().Size().iHeight),
                                   EAspectRatioNotPreserved);
             mData->mImageTextureId = 0;
-            mData->mZoomInTextureId = aId;
+            mSliderModel->IsLandscape() ? mData->mZoomInTextureLscId = aId :
+                                          mData->mZoomInTexturePrtId = aId;
             }
             break;
          case KAlfZoomOutTextureId:
@@ -637,9 +664,11 @@ void MulSliderVertical::ProvideBitmapL (TInt aId, CFbsBitmap *& aBitmap, CFbsBit
                                      EAspectRatioNotPreserved);
 
            mData->mImageTextureId = 0;
-           mData->mZoomOutTextureId = aId;
+           mSliderModel->IsLandscape() ? mData->mZoomOutTextureLscId = aId :
+                                         mData->mZoomOutTexturePrtId = aId ;
+           
            }
-             break;
+           break;
         default:
             break;
                
@@ -691,6 +720,41 @@ void MulSliderVertical::SetBackgroundBrush()
     mData->mHasBackground = true;
     }    
     
+// ----------------------------------------------------------------------------
+//  skinTexture()
+// ----------------------------------------------------------------------------
+//
+TAlfImage MulSliderVertical::skinTexture(TSize aPrtImageSize, TSize aLscImageSize, TInt aPrtSkinId, TInt aLscSkinId )
+    {
+        const CAlfControl* ctrl = (CAlfControl*)(&control());
+        
+        if ( aPrtImageSize != aLscImageSize )
+            {
+            if ( aPrtSkinId == 0 || aLscSkinId == 0 )
+                {
+                mData->mTexture = &((ctrl->Env()).TextureManager().CreateTextureL(
+                                    KAlfAutoGeneratedTextureId,
+                                    (MAlfBitmapProvider *)this,
+                                    (TAlfTextureFlags)(EAlfTextureFlagRetainResolution|EAlfTextureFlagSkinContent)));
+                TAlfImage dummyImage(*mData->mTexture);
+                return dummyImage;
+                }
+            }
+        else if ( aPrtSkinId == 0 || aLscSkinId == 0 )
+                {
+                TInt id = aPrtSkinId > aLscSkinId ? aPrtSkinId : aLscSkinId;
+                mData->mTexture = ((ctrl->Env()).TextureManager().TextureL(id));
+                TAlfImage dummyImage(*mData->mTexture);
+                return dummyImage;
+                }
+        
+        TInt textureId = mSliderModel->IsLandscape() ? aLscSkinId : aPrtSkinId;
+        mData->mTexture = ((ctrl->Env()).TextureManager().TextureL( textureId ));
+        TAlfImage dummyImage(*mData->mTexture);
+        return dummyImage;
+    }
+
+
 // ---------------------------------------------------------------------------
 //  MakeTransparent()
 // ---------------------------------------------------------------------------
@@ -715,28 +779,30 @@ void MulSliderVertical::MakeTransparent(bool aVal)
 //
 void MulSliderVertical::ConvertDataToPixels()
     {
+    float sliderCentreSize = mData->mSliderCentre->Size().iY.ValueNow();
+    float sliderHandleSize = mData->mSliderHandle->Size().iY.ValueNow();
+    float sliderCentrePos  = mData->mSliderCentre->Pos().iY.ValueNow();
+    
     // Calculate the range in pixel values
-    mData->mRangeInPixels = 
-    (mData->mSliderCentre->Size().iY.ValueNow() - 
-            mData->mSliderHandle->Size().iY.ValueNow());
+    mData->mRangeInPixels = sliderCentreSize - sliderHandleSize;
 
     if(mSliderModel->MaxRange() - mSliderModel->MinRange() != 0)
         {
         // Calculate Tick Size in Pixels
         mData->mTickInPixels = 
-        (mData->mSliderCentre->Size().iY.ValueNow() - 
-                mData->mSliderHandle->Size().iY.ValueNow()) /
-                (mSliderModel->MaxRange() - mSliderModel->MinRange()) ;
+        (sliderCentreSize - sliderHandleSize) /
+            (mSliderModel->MaxRange() - mSliderModel->MinRange()) ;
         }
     // Get the track start pixel value    
-    mData->mTrackStartPoint = mData->mSliderCentre->Pos().iY.ValueNow() +
-    mData->mSliderCentre->Size().iY.ValueNow() -   
-    mData->mSliderHandle->Size().iY.ValueNow()  ;  
+    mData->mTrackStartPoint = 
+    sliderCentrePos + 
+    sliderCentreSize -   
+    sliderHandleSize  ;  
     // Store current tick
     mData->mCurrTick =  mSliderModel->PrimaryValue() ; 
     if(mSliderModel->MaxRange()== mSliderModel->MinRange())
         {
-        mData->mTrackStartPoint= mData->mSliderCentre->Pos().iY.ValueNow();
+        mData->mTrackStartPoint= sliderCentrePos;
         }
     mData->mTick = mSliderModel->Tick();
     }

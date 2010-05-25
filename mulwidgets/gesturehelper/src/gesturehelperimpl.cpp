@@ -338,7 +338,16 @@ TBool CGestureHelperImpl::HandlePointerEventL( const TPointerEvent& aEvent,
         case TPointerEvent::EDrag:
             if(iPointerCount == 1)
                 {
-                HandleSinglePointerEventL( aEvent, aVisual );
+                if(pointerNumber == iCurrentPointer)
+                    {
+                    HandleSinglePointerEventL( aEvent, aVisual );
+                    }
+                else
+                    {
+                    // only the drags on the current pointer should be considered.
+                    return EFalse;
+                    }
+                
                 }
             else if(iPointerCount == 2)
                 {
