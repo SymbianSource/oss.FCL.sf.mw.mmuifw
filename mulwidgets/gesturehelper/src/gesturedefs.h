@@ -43,7 +43,7 @@ const TInt KPreviousPointOffset = 3;
 const TInt KGestureTolerancePercent = 4; // of 100
 
 /// Tolerance for considering it as pinch gesture for the first time
-const TInt KInitialPinchTolerance = 20; // Pixels
+const TInt KInitialPinchTolerance = 5; // Pixels
 
 /// Tolerance for considering it as pinch gesture after a pinch is detected
 const TInt KPinchTolerance = 5; // Pixels

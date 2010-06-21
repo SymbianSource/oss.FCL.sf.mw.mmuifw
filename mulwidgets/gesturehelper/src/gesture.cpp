@@ -909,7 +909,8 @@ inline TPoint CGesture::PreviousPos() const
 //
 TInt CGesture::PinchPercent() const
     {
-    return (iPinchEndDistance*100/iPinchStartDistance);
+	// Added 0.5 to avoid 5.7 getting rounded off to 5.
+    return (iPinchEndDistance*100/iPinchStartDistance) + 0.5;	
     }
 
 // ----------------------------------------------------------------------------
@@ -922,9 +923,7 @@ TPoint CGesture::PinchCentrePoint() const
         {
         return TPoint(0,0);
         }
-    TInt greaterX = iPoints[0].iPos.iX > iSecondaryPoints[0].iPos.iX ? iPoints[0].iPos.iX : iSecondaryPoints[0].iPos.iX;
-    TInt greaterY = iPoints[0].iPos.iY > iSecondaryPoints[0].iPos.iY ? iPoints[0].iPos.iY : iSecondaryPoints[0].iPos.iY; 
-    return TPoint( (Abs(iPoints[0].iPos.iX - iSecondaryPoints[0].iPos.iX)/2 + greaterX), (Abs(iPoints[0].iPos.iY - iSecondaryPoints[0].iPos.iY)/2 + greaterY));
+    return TPoint( (iPoints[0].iPos.iX + iSecondaryPoints[0].iPos.iX)/2, (iPoints[0].iPos.iY + iSecondaryPoints[0].iPos.iY)/2);
     }
 
 // end of file

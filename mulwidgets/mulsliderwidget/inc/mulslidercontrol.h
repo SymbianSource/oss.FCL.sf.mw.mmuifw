@@ -125,8 +125,9 @@ public:
      * Generates the feedback based on the events recieved
      * 
      * @param aEvent Events recieved by the widget on Drag
+     * @param aIntensity Intensity of the feedback.If not passed default will be 50
      */ 
-     void TactileEffectOnDrag(TAlfEvent& aEvent);
+     void TactileEffectOnDrag(TAlfEvent& aEvent , int aIntensity = 50 );
      
      /**
       * Generates the feedback based on the thumb release

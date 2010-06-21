@@ -243,14 +243,14 @@ void MulSliderControl::TactileEffectOnTouchandHold()
 //TactileEffectOnDrag
 //
 //----------------------------------------------------------------------
-void MulSliderControl::TactileEffectOnDrag(TAlfEvent& aEvent)
+void MulSliderControl::TactileEffectOnDrag(TAlfEvent& aEvent, int aIntensity)
 {            
  if (mTactilefdbInstance)
   {
     CCoeControl* ccoecntrl = static_cast<CCoeControl*>(Display()->ObjectProvider());
-    TInt intensity = 50;
+    TInt intensity = aIntensity;
     TTimeIntervalMicroSeconds32 timespan = 400000;
-    mTactilefdbInstance->StartFeedback(ccoecntrl,ETouchContinuousSlider,&aEvent.PointerEvent(),intensity,timespan);
+    mTactilefdbInstance->StartFeedback(ccoecntrl,ETouchDynamicSlider,&aEvent.PointerEvent(),intensity,timespan);
     mDragTactileFeedbackStarted = true;
    }
 }        

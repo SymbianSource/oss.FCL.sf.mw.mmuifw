@@ -101,6 +101,7 @@ struct MulVerticalSliderDataImpl
     int mZoomInTextureLscId; 
     int mZoomOutTexturePrtId;
     int mZoomOutTextureLscId;
+    bool misSetModel;
     
     
     CAlfLayout* mMainLayout;
@@ -122,6 +123,7 @@ struct MulVerticalSliderDataImpl
         {
         mOperation = false;
         mSliderHit = false;
+        misSetModel = false;
         mTickInPixels = 0;
         mRangeInPixels = 0;
         mCurrTickInPixels = 0;
@@ -328,7 +330,9 @@ void  MulSliderVertical::initializeSliderData()
 //
 void MulSliderVertical::layoutVisuals( sliderTemplate /*aTemplateId*/)
     {
-    bool relayout = false;
+
+    bool relayout = mData->misSetModel;
+ 
     if(mData->mLayoutMirrored != AknLayoutUtils::LayoutMirrored())
         {
         mData->mOrientationLandScape = !mSliderModel->IsLandscape();
@@ -342,7 +346,7 @@ void MulSliderVertical::layoutVisuals( sliderTemplate /*aTemplateId*/)
         }  
     if(relayout)
         {
-    
+    mData->misSetModel = false; 
     CAlfControl* ctrl = (CAlfControl*)&control();  
     TAknLayoutRect layoutRect;
     //get the lct rect for mBaseSliderLayout and set it            
@@ -794,10 +798,7 @@ void MulSliderVertical::ConvertDataToPixels()
             (mSliderModel->MaxRange() - mSliderModel->MinRange()) ;
         }
     // Get the track start pixel value    
-    mData->mTrackStartPoint = 
-    sliderCentrePos + 
-    sliderCentreSize -   
-    sliderHandleSize  ;  
+    mData->mTrackStartPoint = sliderCentrePos + sliderCentreSize - sliderHandleSize  ;  
     // Store current tick
     mData->mCurrTick =  mSliderModel->PrimaryValue() ; 
     if(mSliderModel->MaxRange()== mSliderModel->MinRange())
@@ -807,6 +808,22 @@ void MulSliderVertical::ConvertDataToPixels()
     mData->mTick = mSliderModel->Tick();
     }
     
+//----------------------------------------------------------------------------
+//  FeedbackIntensity
+//----------------------------------------------------------------------------
+//
+TInt MulSliderVertical::feedbackIntensity()
+    {
+       /*  We need to find the position of the thumb w.r.t the slider track.
+        *  mData->mTickInPixels will give the no. of pixels each tick will 
+        * 
+        */ 
+    
+       int deltaY = (mSliderModel->PrimaryValue() - mSliderModel->MinRange()) * 
+                    mData->mTickInPixels;
+       TInt intensity =  ( deltaY  * 100 )/ mData->mRangeInPixels  ;
+       return intensity ;
+    }
     
 // ---------------------------------------------------------------------------
 //  createVisualization
@@ -821,7 +838,8 @@ void MulSliderVertical::createVisualization(sliderTemplate /*aTemplateId*/)
         mData->mLayoutMirrored = false;
     // Create the visualization
     CAlfControl* ctrl = (CAlfControl*)&control();
-    mData->mOrientationLandScape = !mSliderModel->IsLandscape();
+    mData->mOrientationLandScape = mSliderModel->IsLandscape();
+    mData->misSetModel = true;
         
     // Visual Hierarchy creation
     // create the mMainLayout
@@ -1142,7 +1160,8 @@ AlfEventStatus MulSliderVertical::handlePointerDownEvent(TAlfEvent * aPntrEvent)
             updateModelPrimaryValue(newPos); 
             //Tactile Feedback For Thumb Drag
             MulSliderControl& sldrcntrl = static_cast<MulSliderControl&>(control());
-            sldrcntrl.TactileEffectOnDrag(*aEvent);
+            int fdbintensity = feedbackIntensity();
+            sldrcntrl.TactileEffectOnDrag(*aEvent , fdbintensity );
             ret = EEventHandled;    
         }
     

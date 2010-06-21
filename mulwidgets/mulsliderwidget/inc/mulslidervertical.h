@@ -308,9 +308,7 @@ private:
      * initializes Model and Widget Pointer
      */
     void initializeSliderData();
-     
-     
-                         
+                              
     /**
      * SetBackgroundBrush
      * 
@@ -360,6 +358,12 @@ private:
      * 
      */
     TAlfImage skinTexture(TSize aPrtImageSize, TSize aLscImageSize, TInt aPrtSkinId, TInt aLscSkinId );
+    
+    /*
+     *  Get the Feedback Intensity 
+     */
+    TInt feedbackIntensity();
+    
     
 private: // Class Data
     
