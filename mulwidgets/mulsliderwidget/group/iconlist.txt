@@ -1,0 +1,2 @@
+-c24,8 qgn_indi_nslider_zoom_in
+-c24,8 qgn_indi_nslider_zoom_out

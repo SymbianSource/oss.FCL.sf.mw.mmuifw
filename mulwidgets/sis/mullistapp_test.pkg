@@ -1,0 +1,122 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: ;Language - standard language definitions
+;
+&EN
+
+; standard SIS file header
+#{"ListTestApp"},(0x0558728E),1,0,0
+
+;Supports Series 60 v 3.0
+[0x1028315F], 0, 0, 0, {"Series60ProductID"}
+
+;Localized Vendor Name
+%{"Nokia"}
+
+;Unique Vendor name
+:"Nokia"
+
+; Files to copy
+
+"\epoc32\release\armv5\urel\testlistwidget.exe"-"!:\sys\bin\testlistwidget.exe"
+"\epoc32\data\z\resource\apps\testlistwidget.rsc"-"!:\resource\apps\testlistwidget.rsc"
+"\epoc32\data\z\private\10003a3f\import\apps\testlistwidget_reg.rsc"-"!:\private\10003a3f\import\apps\testlistwidget_reg.rsc"
+"\epoc32\data\z\resource\apps\testlistwidget_loc.rsc"-"!:\resource\apps\testlistwidget_loc.rsc"
+
+"\epoc32\winscw\c\dataimage\list\i01.png" -"c:\dataimage\list\i01.png"
+"\epoc32\winscw\c\dataimage\list\i02.png" -"c:\dataimage\list\i02.png"
+"\epoc32\winscw\c\dataimage\list\i03.png" -"c:\dataimage\list\i03.png"
+"\epoc32\winscw\c\dataimage\list\i04.png" -"c:\dataimage\list\i04.png"
+"\epoc32\winscw\c\dataimage\list\i05.png" -"c:\dataimage\list\i05.png"
+"\epoc32\winscw\c\dataimage\list\i06.png" -"c:\dataimage\list\i06.png"
+"\epoc32\winscw\c\dataimage\list\i07.png" -"c:\dataimage\list\i07.png"
+"\epoc32\winscw\c\dataimage\list\i08.png" -"c:\dataimage\list\i08.png"
+"\epoc32\winscw\c\dataimage\list\i09.png" -"c:\dataimage\list\i09.png"
+"\epoc32\winscw\c\dataimage\list\i010.png" -"c:\dataimage\list\i010.png"
+"\epoc32\winscw\c\dataimage\list\i011.png" -"c:\dataimage\list\i011.png"
+"\epoc32\winscw\c\dataimage\list\i012.png" -"c:\dataimage\list\i012.png"
+"\epoc32\winscw\c\dataimage\list\i013.png" -"c:\dataimage\list\i013.png"
+"\epoc32\winscw\c\dataimage\list\i014.png" -"c:\dataimage\list\i014.png"
+"\epoc32\winscw\c\dataimage\list\i015.png" -"c:\dataimage\list\i015.png"
+"\epoc32\winscw\c\dataimage\list\i016.png" -"c:\dataimage\list\i016.png"
+"\epoc32\winscw\c\dataimage\list\i017.png" -"c:\dataimage\list\i017.png"
+"\epoc32\winscw\c\dataimage\list\i018.png" -"c:\dataimage\list\i018.png"
+"\epoc32\winscw\c\dataimage\list\i019.png" -"c:\dataimage\list\i019.png"
+"\epoc32\winscw\c\dataimage\list\i010.png" -"c:\dataimage\list\i020.png"
+"\epoc32\winscw\c\dataimage\list\i021.png" -"c:\dataimage\list\i021.png"
+"\epoc32\winscw\c\dataimage\list\i022.png" -"c:\dataimage\list\i022.png"
+"\epoc32\winscw\c\dataimage\list\i023.png" -"c:\dataimage\list\i023.png"
+"\epoc32\winscw\c\dataimage\list\i024.png" -"c:\dataimage\list\i024.png"
+"\epoc32\winscw\c\dataimage\list\i025.png" -"c:\dataimage\list\i025.png"
+"\epoc32\winscw\c\dataimage\list\i026.png" -"c:\dataimage\list\i026.png"
+"\epoc32\winscw\c\dataimage\list\i027.png" -"c:\dataimage\list\i027.png"
+"\epoc32\winscw\c\dataimage\list\i028.png" -"c:\dataimage\list\i028.png"
+"\epoc32\winscw\c\dataimage\list\i029.png" -"c:\dataimage\list\i029.png"
+"\epoc32\winscw\c\dataimage\list\i030.png" -"c:\dataimage\list\i030.png"
+"\epoc32\winscw\c\dataimage\list\i031.png" -"c:\dataimage\list\i031.png"
+"\epoc32\winscw\c\dataimage\list\i032.png" -"c:\dataimage\list\i032.png"
+"\epoc32\winscw\c\dataimage\list\i033.png" -"c:\dataimage\list\i033.png"
+"\epoc32\winscw\c\dataimage\list\i034.png" -"c:\dataimage\list\i034.png"
+"\epoc32\winscw\c\dataimage\list\i035.png" -"c:\dataimage\list\i035.png"
+"\epoc32\winscw\c\dataimage\list\i036.png" -"c:\dataimage\list\i036.png"
+"\epoc32\winscw\c\dataimage\list\i036.png" -"c:\dataimage\list\matrix_stripes.png"
+
+"\epoc32\WINSCW\C\dataimage\list\focus.png" -"c:\dataimage\list\focus.png"
+"\epoc32\WINSCW\C\dataimage\list\bmp.bmp" -"c:\dataimage\list\bmp.bmp"
+"\epoc32\WINSCW\C\dataimage\list\gif.gif" -"c:\dataimage\list\gif.gif"
+"\epoc32\WINSCW\C\dataimage\list\ci01.jpg" -"c:\dataimage\list\ci01.jpg"
+"\epoc32\WINSCW\C\dataimage\list\jpeg.jpg" -"c:\dataimage\list\jpeg.jpg"
+"\epoc32\WINSCW\C\dataimage\list\play.png" -"c:\dataimage\list\play.png"
+"\epoc32\WINSCW\C\dataimage\list\stop.png" -"c:\dataimage\list\stop.png"
+"\epoc32\WINSCW\C\dataimage\list\svg.svg" -"c:\dataimage\list\svg.svg"
+
+
+"\epoc32\WINSCW\C\dataimage\list\i01.svg" -"c:\dataimage\list\i01.svg"
+"\epoc32\WINSCW\C\dataimage\list\i02.svg" -"c:\dataimage\list\i02.svg"
+"\epoc32\WINSCW\C\dataimage\list\i03.svg" -"c:\dataimage\list\i03.svg"
+"\epoc32\WINSCW\C\dataimage\list\i04.svg" -"c:\dataimage\list\i04.svg"
+"\epoc32\WINSCW\C\dataimage\list\i05.svg" -"c:\dataimage\list\i05.svg"
+"\epoc32\winscw\c\dataimage\list\i06.svg" -"c:\dataimage\list\i06.svg"
+"\epoc32\winscw\c\dataimage\list\i07.svg" -"c:\dataimage\list\i07.svg"
+"\epoc32\winscw\c\dataimage\list\i08.svg" -"c:\dataimage\list\i08.svg"
+"\epoc32\winscw\c\dataimage\list\i09.svg" -"c:\dataimage\list\i09.svg"
+"\epoc32\winscw\c\dataimage\list\i010.svg" -"c:\dataimage\list\i010.svg"
+"\epoc32\winscw\c\dataimage\list\i011.svg" -"c:\dataimage\list\i011.svg"
+"\epoc32\winscw\c\dataimage\list\i012.svg" -"c:\dataimage\list\i012.svg"
+"\epoc32\winscw\c\dataimage\list\i013.svg" -"c:\dataimage\list\i013.svg"
+"\epoc32\winscw\c\dataimage\list\i014.svg" -"c:\dataimage\list\i014.svg"
+"\epoc32\winscw\c\dataimage\list\i015.svg" -"c:\dataimage\list\i015.svg"
+"\epoc32\winscw\c\dataimage\list\i016.svg" -"c:\dataimage\list\i016.svg"
+"\epoc32\winscw\c\dataimage\list\i017.svg" -"c:\dataimage\list\i017.svg"
+"\epoc32\winscw\c\dataimage\list\i018.svg" -"c:\dataimage\list\i018.svg"
+"\epoc32\winscw\c\dataimage\list\i019.svg" -"c:\dataimage\list\i019.svg"
+"\epoc32\winscw\c\dataimage\list\i010.svg" -"c:\dataimage\list\i020.svg"
+"\epoc32\winscw\c\dataimage\list\i021.svg" -"c:\dataimage\list\i021.svg"
+"\epoc32\winscw\c\dataimage\list\i022.svg" -"c:\dataimage\list\i022.svg"
+"\epoc32\winscw\c\dataimage\list\i023.svg" -"c:\dataimage\list\i023.svg"
+"\epoc32\winscw\c\dataimage\list\i024.svg" -"c:\dataimage\list\i024.svg"
+"\epoc32\winscw\c\dataimage\list\i025.svg" -"c:\dataimage\list\i025.svg"
+"\epoc32\winscw\c\dataimage\list\i026.svg" -"c:\dataimage\list\i026.svg"
+"\epoc32\winscw\c\dataimage\list\i027.svg" -"c:\dataimage\list\i027.svg"
+"\epoc32\winscw\c\dataimage\list\i028.svg" -"c:\dataimage\list\i028.svg"
+"\epoc32\winscw\c\dataimage\list\i029.svg" -"c:\dataimage\list\i029.svg"
+"\epoc32\winscw\c\dataimage\list\i030.svg" -"c:\dataimage\list\i030.svg"
+"\epoc32\winscw\c\dataimage\list\i031.svg" -"c:\dataimage\list\i031.svg"
+"\epoc32\winscw\c\dataimage\list\i032.svg" -"c:\dataimage\list\i032.svg"
+"\epoc32\winscw\c\dataimage\list\i033.svg" -"c:\dataimage\list\i033.svg"
+"\epoc32\winscw\c\dataimage\list\i034.svg" -"c:\dataimage\list\i034.svg"
+"\epoc32\winscw\c\dataimage\list\i035.svg" -"c:\dataimage\list\i035.svg"
+"\epoc32\winscw\c\dataimage\list\i036.svg" -"c:\dataimage\list\i036.svg"
+"\epoc32\WINSCW\C\dataimage\list\play.svg" -"c:\dataimage\list\play.svg"
+"\epoc32\WINSCW\C\dataimage\list\stop.svg" -"c:\dataimage\list\stop.svg"

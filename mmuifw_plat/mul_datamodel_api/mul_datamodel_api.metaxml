@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="8618a03bd07fa81f7fc7a78830f5d71e" dataversion="1.0">
+<name>mul datamodel api</name>
+<description>DataModel API</description>
+<type>c++</type>
+<subsystem>muldatamodel</subsystem>
+<libs><lib name="muldatamodel.lib"/>
+</libs>
+<release category="domain" sinceversion="5.0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

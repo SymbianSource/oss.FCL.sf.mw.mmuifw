@@ -1,0 +1,44 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: pkg file for osncore.
+;
+
+﻿; ============================================================================
+;  Name        : osncore.pkg
+;  Part of     : Decalrative UI
+;  Description : Package file
+;  Version     : %version: 2 % << Don't touch! Updated by Synergy at check-out.
+;
+;  Copyright © 2007 Nokia.  All rights reserved.
+;  This material, including documentation and any related computer
+;  programs, is protected by copyright controlled by Nokia.  All
+;  rights are reserved.  Copying, including reproducing, storing,
+;  adapting or translating, any or all of this material requires the
+;  prior written consent of Nokia.  This material also contains
+;  confidential information which may not be disclosed to others
+;  without the prior written consent of Nokia.
+; ============================================================================
+;  Template version: 4.1
+
+; standard SIS file header
+#{"Os neutral library"},(0x1020725D),1,0,0
+
+;Localized Vendor Name
+%{"Nokia-EN"}
+
+;Unique Vendor name
+:"Nokia"
+
+;Files to copy
+"\epoc32\release\armv5\urel\osncore.dll"-"!:\sys\bin\osncore.dll"

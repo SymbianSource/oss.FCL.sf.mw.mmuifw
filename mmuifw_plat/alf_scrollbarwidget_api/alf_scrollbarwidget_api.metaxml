@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="001bb4a510beadc7dbb6f1bca5f14de2" dataversion="1.0">
+<name>alf scrollbarwidget api</name>
+<description>API for alfscrollbarwidget</description>
+<type>c++</type>
+<subsystem>alfscrollbarwidget</subsystem>
+<libs></libs>
+<release category="domain" sinceversion="5.0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

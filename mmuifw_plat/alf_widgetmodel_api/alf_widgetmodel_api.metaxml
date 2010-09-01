@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="50965c680089dd7c554b4cac018089b6" dataversion="1.0">
+<name>alf widgetmodel api</name>
+<description>Alf WidgetModel API</description>
+<type>c++</type>
+<subsystem>alfwidgetmodel</subsystem>
+<libs><lib name="alfwidgetmodel.lib"/>
+</libs>
+<release category="domain" sinceversion="5.0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

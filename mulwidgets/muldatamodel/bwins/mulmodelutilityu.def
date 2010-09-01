@@ -1,0 +1,48 @@
+EXPORTS
+	??0MulVariantType@Alf@@QAE@XZ @ 1 NONAME ; Alf::MulVariantType::MulVariantType(void)
+	?IsDirty@MulVisualItem@Alf@@QBE_NW4TVisualAttribute@mulvisualitem@2@@Z @ 2 NONAME ; bool Alf::MulVisualItem::IsDirty(enum Alf::mulvisualitem::TVisualAttribute) const
+	??0MulVariantType@Alf@@QAE@ABN@Z @ 3 NONAME ; Alf::MulVariantType::MulVariantType(double const &)
+	??0MulVariantType@Alf@@QAE@ABVTDesC16@@@Z @ 4 NONAME ; Alf::MulVariantType::MulVariantType(class TDesC16 const &)
+	?uinteger@MulVariantType@Alf@@UBEIXZ @ 5 NONAME ; unsigned int Alf::MulVariantType::uinteger(void) const
+	?IntToUString@MulModelUtility@Alf@@SA?AVUString@osncore@@H@Z @ 6 NONAME ; class osncore::UString Alf::MulModelUtility::IntToUString(int)
+	?Type@MulVariantType@Alf@@UBE?AW4TMulType@IMulVariantType@2@XZ @ 7 NONAME ; enum Alf::IMulVariantType::TMulType Alf::MulVariantType::Type(void) const
+	?ConvertUStringToTDes@MulModelUtility@Alf@@SAXABVUString@osncore@@AAVTDes16@@@Z @ 8 NONAME ; void Alf::MulModelUtility::ConvertUStringToTDes(class osncore::UString const &, class TDes16 &)
+	?Attribute@MulVisualItem@Alf@@QBEPAVIMulVariantType@2@W4TVisualAttribute@mulvisualitem@2@@Z @ 9 NONAME ; class Alf::IMulVariantType * Alf::MulVisualItem::Attribute(enum Alf::mulvisualitem::TVisualAttribute) const
+	?Attributes@MulVisualItem@Alf@@QBE?BV?$vector@W4TVisualAttribute@mulvisualitem@Alf@@V?$allocator@W4TVisualAttribute@mulvisualitem@Alf@@@std@@@std@@XZ @ 10 NONAME ; class std::vector<enum Alf::mulvisualitem::TVisualAttribute, class std::allocator<enum Alf::mulvisualitem::TVisualAttribute> > const Alf::MulVisualItem::Attributes(void) const
+	??0MulDataPath@Alf@@QAE@XZ @ 11 NONAME ; Alf::MulDataPath::MulDataPath(void)
+	?Map@MulVariantType@Alf@@UBEAAVIAlfMap@2@XZ @ 12 NONAME ; class Alf::IAlfMap & Alf::MulVariantType::Map(void) const
+	?Depth@MulDataPath@Alf@@QBEHXZ @ 13 NONAME ; int Alf::MulDataPath::Depth(void) const
+	??1MulVariantType@Alf@@UAE@XZ @ 14 NONAME ; Alf::MulVariantType::~MulVariantType(void)
+	?ConvertVisualItemToMap@MulModelUtility@Alf@@SA?AV?$auto_ptr@VIAlfMap@Alf@@@std@@AAVMulVisualItem@2@@Z @ 15 NONAME ; class std::auto_ptr<class Alf::IAlfMap> Alf::MulModelUtility::ConvertVisualItemToMap(class Alf::MulVisualItem &)
+	??0MulVariantType@Alf@@QAE@ABI@Z @ 16 NONAME ; Alf::MulVariantType::MulVariantType(unsigned int const &)
+	?SetAttribute@MulVisualItem@Alf@@QAEXW4TVisualAttribute@mulvisualitem@2@ABVTDesC16@@H@Z @ 17 NONAME ; void Alf::MulVisualItem::SetAttribute(enum Alf::mulvisualitem::TVisualAttribute, class TDesC16 const &, int)
+	??1MulVisualItem@Alf@@QAE@XZ @ 18 NONAME ; Alf::MulVisualItem::~MulVisualItem(void)
+	??0MulDataPath@Alf@@QAE@HH@Z @ 19 NONAME ; Alf::MulDataPath::MulDataPath(int, int)
+	??AMulDataPath@Alf@@QBEHH@Z @ 20 NONAME ; int Alf::MulDataPath::operator[](int) const
+	?ConvertTDesToUString@MulModelUtility@Alf@@SAXABVTDesC16@@AAVUString@osncore@@@Z @ 21 NONAME ; void Alf::MulModelUtility::ConvertTDesToUString(class TDesC16 const &, class osncore::UString &)
+	??0MulVariantType@Alf@@QAE@AAVIAlfMap@1@@Z @ 22 NONAME ; Alf::MulVariantType::MulVariantType(class Alf::IAlfMap &)
+	??0MulVisualItem@Alf@@QAE@ABV01@@Z @ 23 NONAME ; Alf::MulVisualItem::MulVisualItem(class Alf::MulVisualItem const &)
+	??0MulVisualItem@Alf@@QAE@XZ @ 24 NONAME ; Alf::MulVisualItem::MulVisualItem(void)
+	?AttributeAsString@MulVisualItem@Alf@@QBEABVTDesC16@@W4TVisualAttribute@mulvisualitem@2@@Z @ 25 NONAME ; class TDesC16 const & Alf::MulVisualItem::AttributeAsString(enum Alf::mulvisualitem::TVisualAttribute) const
+	?Append@MulDataPath@Alf@@QAEXH@Z @ 26 NONAME ; void Alf::MulDataPath::Append(int)
+	?AlfStringToUString@MulModelUtility@Alf@@SA?AVUString@osncore@@ABV34@@Z @ 27 NONAME ; class osncore::UString Alf::MulModelUtility::AlfStringToUString(class osncore::UString const &)
+	??0MulVariantType@Alf@@QAE@AB_N@Z @ 28 NONAME ; Alf::MulVariantType::MulVariantType(bool const &)
+	?integer@MulVariantType@Alf@@UBEHXZ @ 29 NONAME ; int Alf::MulVariantType::integer(void) const
+	?ConvertTDes8ToUString@MulModelUtility@Alf@@SAXABVTDesC8@@AAVUString@osncore@@@Z @ 30 NONAME ; void Alf::MulModelUtility::ConvertTDes8ToUString(class TDesC8 const &, class osncore::UString &)
+	?CreateVisualItem@MulModelUtility@Alf@@SA?AV?$auto_ptr@VMulVisualItem@Alf@@@std@@W4TLogicalTemplate@mulwidget@2@@Z @ 31 NONAME ; class std::auto_ptr<class Alf::MulVisualItem> Alf::MulModelUtility::CreateVisualItem(enum Alf::mulwidget::TLogicalTemplate)
+	??0MulDataPath@Alf@@QAE@H@Z @ 32 NONAME ; Alf::MulDataPath::MulDataPath(int)
+	??0MulDataPath@Alf@@QAE@ABV01@@Z @ 33 NONAME ; Alf::MulDataPath::MulDataPath(class Alf::MulDataPath const &)
+	?Clone@MulVariantType@Alf@@UAE?AV?$auto_ptr@VIMulVariantType@Alf@@@std@@XZ @ 34 NONAME ; class std::auto_ptr<class Alf::IMulVariantType> Alf::MulVariantType::Clone(void)
+	??1MulDataPath@Alf@@QAE@XZ @ 35 NONAME ; Alf::MulDataPath::~MulDataPath(void)
+	?real@MulVariantType@Alf@@UBENXZ @ 36 NONAME ; double Alf::MulVariantType::real(void) const
+	?ConvertUStringToTDes8@MulModelUtility@Alf@@SAXABVUString@osncore@@AAVTDes8@@@Z @ 37 NONAME ; void Alf::MulModelUtility::ConvertUStringToTDes8(class osncore::UString const &, class TDes8 &)
+	?CreateVariantType@MulModelUtility@Alf@@SAPAVIAlfVariantType@2@AAV32@@Z @ 38 NONAME ; class Alf::IAlfVariantType * Alf::MulModelUtility::CreateVariantType(class Alf::IAlfVariantType &)
+	?AttributeAsInt@MulVisualItem@Alf@@QBEHW4TVisualAttribute@mulvisualitem@2@@Z @ 39 NONAME ; int Alf::MulVisualItem::AttributeAsInt(enum Alf::mulvisualitem::TVisualAttribute) const
+	?UStringToAlfString@MulModelUtility@Alf@@SA?AVUString@osncore@@ABV34@@Z @ 40 NONAME ; class osncore::UString Alf::MulModelUtility::UStringToAlfString(class osncore::UString const &)
+	??0MulVariantType@Alf@@QAE@ABH@Z @ 41 NONAME ; Alf::MulVariantType::MulVariantType(int const &)
+	?SetAttribute@MulVisualItem@Alf@@QAEXW4TVisualAttribute@mulvisualitem@2@PAVIMulVariantType@2@HW4TAttributeOwnership@12@@Z @ 42 NONAME ; void Alf::MulVisualItem::SetAttribute(enum Alf::mulvisualitem::TVisualAttribute, class Alf::IMulVariantType *, int, enum Alf::MulVisualItem::TAttributeOwnership)
+	?SetAttribute@MulVisualItem@Alf@@QAEXW4TVisualAttribute@mulvisualitem@2@HH@Z @ 43 NONAME ; void Alf::MulVisualItem::SetAttribute(enum Alf::mulvisualitem::TVisualAttribute, int, int)
+	?boolean@MulVariantType@Alf@@UBE_NXZ @ 44 NONAME ; bool Alf::MulVariantType::boolean(void) const
+	?ConvertMapToVisualItem@MulModelUtility@Alf@@SA?AV?$auto_ptr@VMulVisualItem@Alf@@@std@@AAVIAlfMap@2@@Z @ 45 NONAME ; class std::auto_ptr<class Alf::MulVisualItem> Alf::MulModelUtility::ConvertMapToVisualItem(class Alf::IAlfMap &)
+	?DesC@MulVariantType@Alf@@UBEABVTDesC16@@XZ @ 46 NONAME ; class TDesC16 const & Alf::MulVariantType::DesC(void) const
+

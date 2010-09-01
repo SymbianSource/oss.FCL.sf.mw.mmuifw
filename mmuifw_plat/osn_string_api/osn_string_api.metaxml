@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="2bf6d4a10c5a142720bc77f4aeef6c87" dataversion="1.0">
+<name>osn string api</name>
+<description>osn string api</description>
+<type>c++</type>
+<subsystem>osncore</subsystem>
+<libs><lib name="osncore.lib"/>
+</libs>
+<release category="domain" sinceversion="5.0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

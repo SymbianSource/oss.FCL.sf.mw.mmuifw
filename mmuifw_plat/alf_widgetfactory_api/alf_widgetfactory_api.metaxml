@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="2e83a08df571f254641c882d64e63fc8" dataversion="1.0">
+<name>alf widgetfactory api</name>
+<description>API for AlfWidgetFactory</description>
+<type>c++</type>
+<subsystem>alfwidgetfactory</subsystem>
+<libs></libs>
+<release category="domain" sinceversion="5.0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

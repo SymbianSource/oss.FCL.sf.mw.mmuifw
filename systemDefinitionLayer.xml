@@ -1,0 +1,589 @@
+<layer name="mmuifw">
+  <module name="group_mmuifw">
+    <component name="group_mmuifw">
+      <unit unitID="mmuifw" mrp="" bldFile="&layer_real_source_path;\group" name="mmuifw" />
+    </component>
+  </module>
+  
+  <module name = "alfwidgetutils">
+		<component name = "alfwidgetutils">
+		 		<unit unitID = "mmuifw_alfwidgetutils" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\alfwidgetutils\group" name= "alfwidgetutils"/>
+		</component>
+</module>
+
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_alfwidgetutils_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\alfwidgetutils\internal\test\group" name= "test"/>
+		</component>
+</module>
+
+
+
+
+<module name = "declarativeui">
+		<component name = "declarativeui">
+		 		<unit unitID = "mmuifw_declarativeui" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\declarativeui\group" name= "declarativeui"/>
+		</component>
+</module>
+<module name = "declarativeuiengine">
+		<component name = "declarativeuiengine">
+		 		<unit unitID = "mmuifw_declarativeui_declarativeuiengine" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\declarativeui\declarativeuiengine\group" name= "declarativeuiengine"/>
+		</component>
+</module>
+
+
+
+<module name = "ut_duiengine">
+		<component name = "ut_duiengine">
+		 		<unit unitID = "mmuifw_declarativeui_declarativeuiengine_internal_ut_duiengine" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\declarativeui\declarativeuiengine\internal\ut_duiengine\group" name= "ut_duiengine"/>
+		</component>
+</module>
+
+
+
+
+<module name = "interpreter">
+z		<component name = "interpreter">
+		 		<unit unitID = "mmuifw_declarativeui_interpreter" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\declarativeui\interpreter\group" name= "interpreter"/>
+		</component>
+</module>
+
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_declarativeui_interpreter_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\declarativeui\interpreter\internal\test\group" name= "test"/>
+		</component>
+</module>
+<module name = "internal">
+		<component name = "internal">
+		 		<unit unitID = "mmuifw_internal" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\internal\group" name= "internal"/>
+		</component>
+</module>
+<module name = "configchanges">
+		<component name = "configchanges">
+		 		<unit unitID = "mmuifw_internal_configchanges" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\internal\configchanges\group" name= "configchanges"/>
+		</component>
+</module>
+
+<module name = "lctmanagement">
+		<component name = "lctmanagement">
+		 		<unit unitID = "mmuifw_lctmanagement" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\lctmanagement\group" name= "lctmanagement"/>
+		</component>
+</module>
+
+<module name = "lctmanager">
+		<component name = "lctmanager">
+		 		<unit unitID = "mmuifw_lctmanagement_lctmanager" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\lctmanagement\lctmanager\group" name= "lctmanager"/>
+		</component>
+</module>
+
+
+<module name = "Test">
+		<component name = "Test">
+		 		<unit unitID = "mmuifw_lctmanagement_lctmanager_internal_Test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\lctmanagement\lctmanager\internal\Test\group" name= "Test"/>
+		</component>
+</module>
+
+
+<module name = "osncore">
+		<component name = "osncore">
+		 		<unit unitID = "mmuifw_osncore" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\osncore\group" name= "osncore"/>
+		</component>
+</module>
+<module name = "osncore">
+		<component name = "osncore">
+		 		<unit unitID = "mmuifw_osncore_osncore" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\osncore\osncore\group" name= "osncore"/>
+		</component>
+</module>
+
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_osncore_osncore_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\osncore\osncore\internal\test\group" name= "test"/>
+		</component>
+</module>
+
+
+
+<module name = "resourcepool">
+		<component name = "resourcepool">
+		 		<unit unitID = "mmuifw_resourcepool" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\resourcepool\group" name= "resourcepool"/>
+		</component>
+</module>
+
+<module name = "EUnit_tests">
+		<component name = "EUnit_tests">
+		 		<unit unitID = "mmuifw_resourcepool_internal_EUnit_tests" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\resourcepool\internal\EUnit_tests\group" name= "EUnit_tests"/>
+		</component>
+</module>
+
+<module name = "t_alfresourcepool">
+		<component name = "t_alfresourcepool">
+		 		<unit unitID = "mmuifw_resourcepool_internal_t_alfresourcepool" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\resourcepool\internal\t_alfresourcepool\group" name= "t_alfresourcepool"/>
+		</component>
+</module>
+<module name = "thememanagement">
+		<component name = "thememanagement">
+		 		<unit unitID = "mmuifw_thememanagement" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\thememanagement\group" name= "thememanagement"/>
+		</component>
+</module>
+
+<module name = "ThemeManager">
+		<component name = "ThemeManager">
+		 		<unit unitID = "mmuifw_thememanagement_ThemeManager" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\thememanagement\ThemeManager\group" name= "ThemeManager"/>
+		</component>
+</module>
+
+
+
+<module name = "FunctionalTest">
+		<component name = "FunctionalTest">
+		 		<unit unitID = "mmuifw_thememanagement_ThemeManager_internal_FunctionalTest" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\thememanagement\ThemeManager\internal\FunctionalTest\group" name= "FunctionalTest"/>
+		</component>
+</module>
+<module name = "TestAnimation">
+		<component name = "TestAnimation">
+		 		<unit unitID = "mmuifw_thememanagement_ThemeManager_internal_FunctionalTest_TestAnimation" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\thememanagement\ThemeManager\internal\FunctionalTest\TestAnimation\group" name= "TestAnimation"/>
+		</component>
+</module>
+<module name = "TestFrameImage">
+		<component name = "TestFrameImage">
+		 		<unit unitID = "mmuifw_thememanagement_ThemeManager_internal_FunctionalTest_TestFrameImage" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\thememanagement\ThemeManager\internal\FunctionalTest\TestFrameImage\group" name= "TestFrameImage"/>
+		</component>
+</module>
+<module name = "TestLocalization">
+		<component name = "TestLocalization">
+		 		<unit unitID = "mmuifw_thememanagement_ThemeManager_internal_FunctionalTest_TestLocalization" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\thememanagement\ThemeManager\internal\FunctionalTest\TestLocalization\group" name= "TestLocalization"/>
+		</component>
+</module>
+<module name = "TestSkinImage">
+		<component name = "TestSkinImage">
+		 		<unit unitID = "mmuifw_thememanagement_ThemeManager_internal_FunctionalTest_TestSkinImage" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\thememanagement\ThemeManager\internal\FunctionalTest\TestSkinImage\group" name= "TestSkinImage"/>
+		</component>
+</module>
+<module name = "testing">
+		<component name = "testing">
+		 		<unit unitID = "mmuifw_thememanagement_ThemeManager_internal_testing" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\thememanagement\ThemeManager\internal\testing\group" name= "testing"/>
+		</component>
+</module>
+
+
+
+
+
+
+<module name = "TestThemeManager">
+		<component name = "TestThemeManager">
+		 		<unit unitID = "mmuifw_thememanagement_ThemeManager_internal_TestThemeManager" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\thememanagement\ThemeManager\internal\TestThemeManager\group" name= "TestThemeManager"/>
+		</component>
+</module>
+<module name = "uimodel">
+		<component name = "uimodel">
+		 		<unit unitID = "mmuifw_uimodel" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\uimodel\group" name= "uimodel"/>
+		</component>
+</module>
+
+<module name = "node">
+		<component name = "node">
+		 		<unit unitID = "mmuifw_uimodel_node" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\uimodel\node\group" name= "node"/>
+		</component>
+</module>
+
+
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_uimodel_node_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\uimodel\node\internal\test\group" name= "test"/>
+		</component>
+</module>
+
+<module name = "nodeiterator">
+		<component name = "nodeiterator">
+		 		<unit unitID = "mmuifw_uimodel_nodeiterator" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\uimodel\nodeiterator\group" name= "nodeiterator"/>
+		</component>
+</module>
+
+
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_uimodel_nodeiterator_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\uimodel\nodeiterator\internal\test\group" name= "test"/>
+		</component>
+</module>
+
+<module name = "widgeteditors">
+		<component name = "widgeteditors">
+		 		<unit unitID = "mmuifw_widgeteditors" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgeteditors\group" name= "widgeteditors"/>
+		</component>
+</module>
+<module name = "alfeditors">
+		<component name = "alfeditors">
+		 		<unit unitID = "mmuifw_widgeteditors_alfeditors" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgeteditors\alfeditors\group" name= "alfeditors"/>
+		</component>
+</module>
+<module name = "alfeditortools">
+		<component name = "alfeditortools">
+		 		<unit unitID = "mmuifw_widgeteditors_alfeditortools" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgeteditors\alfeditortools\group" name= "alfeditortools"/>
+		</component>
+</module>
+
+<module name = "unittests">
+		<component name = "unittests">
+		 		<unit unitID = "mmuifw_widgeteditors_internal_unittests" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgeteditors\internal\unittests\group" name= "unittests"/>
+		</component>
+</module>
+
+
+
+
+
+
+<module name = "widgetmodel">
+		<component name = "widgetmodel">
+		 		<unit unitID = "mmuifw_widgetmodel" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgetmodel\group" name= "widgetmodel"/>
+		</component>
+</module>
+<module name = "alfcustomlayoutmanagers">
+		<component name = "alfcustomlayoutmanagers">
+		 		<unit unitID = "mmuifw_widgetmodel_alfcustomlayoutmanagers" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgetmodel\alfcustomlayoutmanagers\group" name= "alfcustomlayoutmanagers"/>
+		</component>
+</module>
+<module name = "alflctlayoutmanagers">
+		<component name = "alflctlayoutmanagers">
+		 		<unit unitID = "mmuifw_widgetmodel_alfcustomlayoutmanagers_alflctlayoutmanagers" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgetmodel\alfcustomlayoutmanagers\alflctlayoutmanagers\group" name= "alflctlayoutmanagers"/>
+		</component>
+</module>
+<module name = "alfwidgetfactory">
+		<component name = "alfwidgetfactory">
+		 		<unit unitID = "mmuifw_widgetmodel_alfwidgetfactory" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgetmodel\alfwidgetfactory\group" name= "alfwidgetfactory"/>
+		</component>
+</module>
+
+
+<module name = "Test">
+		<component name = "Test">
+		 		<unit unitID = "mmuifw_widgetmodel_alfwidgetfactory_internal_Test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgetmodel\alfwidgetfactory\internal\Test\group" name= "Test"/>
+		</component>
+</module>
+
+
+
+<module name = "alfwidgetmodel">
+		<component name = "alfwidgetmodel">
+		 		<unit unitID = "mmuifw_widgetmodel_alfwidgetmodel" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgetmodel\alfwidgetmodel\group" name= "alfwidgetmodel"/>
+		</component>
+</module>
+
+
+
+
+
+
+<module name = "Aakash">
+		<component name = "Aakash">
+		 		<unit unitID = "mmuifw_widgets_Aakash" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\group" name= "Aakash"/>
+		</component>
+</module>
+
+<module name = "common">
+		<component name = "common">
+		 		<unit unitID = "mmuifw_widgets_Aakash_common" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\common\group" name= "common"/>
+		</component>
+</module>
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_widgets_Aakash_common_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\common\internal\test\group" name= "test"/>
+		</component>
+</module>
+
+<module name = "mulsingleitemmodel">
+		<component name = "mulsingleitemmodel">
+		 		<unit unitID = "mmuifw_widgets_Aakash_common_mulsingleitemmodel" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\common\mulsingleitemmodel\group" name= "mulsingleitemmodel"/>
+		</component>
+</module>
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_widgets_Aakash_common_mulsingleitemmodel_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\common\mulsingleitemmodel\internal\test\group" name= "test"/>
+		</component>
+</module>
+
+
+<module name = "gesturehelper">
+		<component name = "gesturehelper">
+		 		<unit unitID = "mmuifw_widgets_Aakash_gesturehelper" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\gesturehelper\group" name= "gesturehelper"/>
+		</component>
+</module>
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_widgets_Aakash_gesturehelper_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\gesturehelper\test\group" name= "test"/>
+		</component>
+</module>
+<module name = "gesturetest">
+		<component name = "gesturetest">
+		 		<unit unitID = "mmuifw_widgets_Aakash_gesturehelper_test_gesturetest" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\gesturehelper\test\gesturetest\group" name= "gesturetest"/>
+		</component>
+</module>
+
+
+
+<module name = "configchanges">
+		<component name = "configchanges">
+		 		<unit unitID = "mmuifw_widgets_Aakash_internal_configchanges" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\internal\configchanges\group" name= "configchanges"/>
+		</component>
+</module>
+<module name = "mullogging">
+		<component name = "mullogging">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mullogging" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mullogging\group" name= "mullogging"/>
+		</component>
+</module>
+<module name = "mulwidgets">
+		<component name = "mulwidgets">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\group" name= "mulwidgets"/>
+		</component>
+</module>
+
+
+<module name = "MMenuProto">
+		<component name = "MMenuProto">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_Internal_ProtoType_MMenuProto" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\Internal\ProtoType\MMenuProto\group" name= "MMenuProto"/>
+		</component>
+</module>
+<module name = "mulcoverflowwidget">
+		<component name = "mulcoverflowwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulcoverflowwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulcoverflowwidget\group" name= "mulcoverflowwidget"/>
+		</component>
+</module>
+
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulcoverflowwidget_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulcoverflowwidget\internal\test\group" name= "test"/>
+		</component>
+</module>
+<module name = "testcoverflowwidget">
+		<component name = "testcoverflowwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulcoverflowwidget_internal_test_testcoverflowwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulcoverflowwidget\internal\test\testcoverflowwidget\group" name= "testcoverflowwidget"/>
+		</component>
+</module>
+
+
+
+
+<module name = "mulgridwidget">
+		<component name = "mulgridwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulgridwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulgridwidget\group" name= "mulgridwidget"/>
+		</component>
+</module>
+
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulgridwidget_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulgridwidget\internal\test\group" name= "test"/>
+		</component>
+</module>
+<module name = "testgridwidget">
+		<component name = "testgridwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulgridwidget_internal_test_testgridwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulgridwidget\internal\test\testgridwidget\group" name= "testgridwidget"/>
+		</component>
+</module>
+
+
+
+
+<module name = "mullistwidget">
+		<component name = "mullistwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mullistwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mullistwidget\group" name= "mullistwidget"/>
+		</component>
+</module>
+
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mullistwidget_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mullistwidget\internal\test\group" name= "test"/>
+		</component>
+</module>
+<module name = "testlistwidget">
+		<component name = "testlistwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mullistwidget_internal_test_testlistwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mullistwidget\internal\test\testlistwidget\group" name= "testlistwidget"/>
+		</component>
+</module>
+
+
+
+
+<module name = "mulmetapanewidget">
+		<component name = "mulmetapanewidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulmetapanewidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulmetapanewidget\group" name= "mulmetapanewidget"/>
+		</component>
+</module>
+
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulmetapanewidget_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulmetapanewidget\internal\test\group" name= "test"/>
+		</component>
+</module>
+<module name = "testmetapanewidget">
+		<component name = "testmetapanewidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulmetapanewidget_internal_test_testmetapanewidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulmetapanewidget\internal\test\testmetapanewidget\group" name= "testmetapanewidget"/>
+		</component>
+</module>
+
+
+
+
+<module name = "mulsliderwidget">
+		<component name = "mulsliderwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulsliderwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulsliderwidget\group" name= "mulsliderwidget"/>
+		</component>
+</module>
+
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulsliderwidget_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulsliderwidget\internal\test\group" name= "test"/>
+		</component>
+</module>
+<module name = "testsliderwidget">
+		<component name = "testsliderwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulsliderwidget_internal_test_testsliderwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulsliderwidget\internal\test\testsliderwidget\group" name= "testsliderwidget"/>
+		</component>
+</module>
+
+
+
+
+
+
+
+
+
+
+<module name = "mulsoftkeywidget">
+		<component name = "mulsoftkeywidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulsoftkeywidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulsoftkeywidget\group" name= "mulsoftkeywidget"/>
+		</component>
+</module>
+
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulsoftkeywidget_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulsoftkeywidget\internal\test\group" name= "test"/>
+		</component>
+</module>
+<module name = "testsoftkeywidget">
+		<component name = "testsoftkeywidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_mulsoftkeywidget_internal_test_testsoftkeywidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\mulsoftkeywidget\internal\test\testsoftkeywidget\group" name= "testsoftkeywidget"/>
+		</component>
+</module>
+
+
+
+
+
+<module name = "multoolbarwidget">
+		<component name = "multoolbarwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_multoolbarwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\multoolbarwidget\group" name= "multoolbarwidget"/>
+		</component>
+</module>
+
+
+<module name = "test">
+		<component name = "test">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_multoolbarwidget_internal_test" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\multoolbarwidget\internal\test\group" name= "test"/>
+		</component>
+</module>
+<module name = "testtoolbarwidget">
+		<component name = "testtoolbarwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_multoolbarwidget_internal_test_testtoolbarwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\multoolbarwidget\internal\test\testtoolbarwidget\group" name= "testtoolbarwidget"/>
+		</component>
+</module>
+
+
+
+
+
+<module name = "recyling_protos">
+		<component name = "recyling_protos">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_recyling_protos" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\recyling_protos\group" name= "recyling_protos"/>
+		</component>
+</module>
+<module name = "common">
+		<component name = "common">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_recyling_protos_common" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\recyling_protos\common\group" name= "common"/>
+		</component>
+</module>
+<module name = "mulsingleitemmodel">
+		<component name = "mulsingleitemmodel">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_recyling_protos_common_mulsingleitemmodel" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\recyling_protos\common\mulsingleitemmodel\group" name= "mulsingleitemmodel"/>
+		</component>
+</module>
+<module name = "mullistwidget">
+		<component name = "mullistwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_recyling_protos_mullistwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\recyling_protos\mullistwidget\group" name= "mullistwidget"/>
+		</component>
+</module>
+
+
+
+<module name = "testlistwidget">
+		<component name = "testlistwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_recyling_protos_mullistwidget_internal_test_testlistwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\recyling_protos\mullistwidget\internal\test\testlistwidget\group" name= "testlistwidget"/>
+		</component>
+</module>
+<module name = "mul_listwidget_api">
+		<component name = "mul_listwidget_api">
+		 		<unit unitID = "mmuifw_widgets_Aakash_mulwidgets_recyling_protos_mul_listwidget_api" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\mulwidgets\recyling_protos\mul_listwidget_api\group" name= "mul_listwidget_api"/>
+		</component>
+</module>
+<module name = "performancetest">
+		<component name = "performancetest">
+		 		<unit unitID = "mmuifw_widgets_Aakash_performancetest" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\performancetest\group" name= "performancetest"/>
+		</component>
+</module>
+<module name = "avkonlist">
+		<component name = "avkonlist">
+		 		<unit unitID = "mmuifw_widgets_Aakash_performancetest_avkonlist" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\performancetest\avkonlist\group" name= "avkonlist"/>
+		</component>
+</module>
+
+<module name = "gridwidget">
+		<component name = "gridwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_performancetest_gridwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\performancetest\gridwidget\group" name= "gridwidget"/>
+		</component>
+</module>
+
+<module name = "listwidget">
+		<component name = "listwidget">
+		 		<unit unitID = "mmuifw_widgets_Aakash_performancetest_listwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\Aakash\performancetest\listwidget\group" name= "listwidget"/>
+		</component>
+</module>
+
+<module name = "alfwidgets">
+		<component name = "alfwidgets">
+		 		<unit unitID = "mmuifw_widgets_alfwidgets" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\alfwidgets\group" name= "alfwidgets"/>
+		</component>
+</module>
+<module name = "alfcontainerwidget">
+		<component name = "alfcontainerwidget">
+		 		<unit unitID = "mmuifw_widgets_alfwidgets_alfcontainerwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\alfwidgets\alfcontainerwidget\group" name= "alfcontainerwidget"/>
+		</component>
+</module>
+
+<module name = "alfscrollbarwidget">
+		<component name = "alfscrollbarwidget">
+		 		<unit unitID = "mmuifw_widgets_alfwidgets_alfscrollbarwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\alfwidgets\alfscrollbarwidget\group" name= "alfscrollbarwidget"/>
+		</component>
+</module>
+
+<module name = "alfviewwidget">
+		<component name = "alfviewwidget">
+		 		<unit unitID = "mmuifw_widgets_alfwidgets_alfviewwidget" mrp = "" filter = "not_build" bldFile = "&layer_real_source_path;\widgets\alfwidgets\alfviewwidget\group" name= "alfviewwidget"/>
+		</component>
+</module>
+
+</layer>
+

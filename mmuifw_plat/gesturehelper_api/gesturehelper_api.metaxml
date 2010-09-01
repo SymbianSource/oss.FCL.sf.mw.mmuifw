@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="28cc48c68e52308ca0b81248e7a3c370" dataversion="1.0">
+<name>gesturehelper api</name>
+<description>API for gesture helper</description>
+<type>c++</type>
+<subsystem>gesturehelper</subsystem>
+<libs></libs>
+<release category="domain" sinceversion="5.0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

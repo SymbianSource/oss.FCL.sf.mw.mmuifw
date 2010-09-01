@@ -1,0 +1,23 @@
+EXPORTS
+	?IsDirty@MulVisualItem@Alf@@QBE_NW4TVisualAttribute@mulvisualitem@2@@Z @ 1 NONAME ; bool Alf::MulVisualItem::IsDirty(enum Alf::mulvisualitem::TVisualAttribute) const
+	??0MulModelImpl@Alf@@QAE@XZ @ 2 NONAME ; Alf::MulModelImpl::MulModelImpl(void)
+	??0MulDataPath@Alf@@QAE@H@Z @ 3 NONAME ; Alf::MulDataPath::MulDataPath(int)
+	??0MulDataPath@Alf@@QAE@ABV01@@Z @ 4 NONAME ; Alf::MulDataPath::MulDataPath(class Alf::MulDataPath const &)
+	??1MulDataPath@Alf@@QAE@XZ @ 5 NONAME ; Alf::MulDataPath::~MulDataPath(void)
+	?AttributeAsInt@MulVisualItem@Alf@@QBEHW4TVisualAttribute@mulvisualitem@2@@Z @ 6 NONAME ; int Alf::MulVisualItem::AttributeAsInt(enum Alf::mulvisualitem::TVisualAttribute) const
+	?Attribute@MulVisualItem@Alf@@QBEPAVIMulVariantType@2@W4TVisualAttribute@mulvisualitem@2@@Z @ 7 NONAME ; class Alf::IMulVariantType * Alf::MulVisualItem::Attribute(enum Alf::mulvisualitem::TVisualAttribute) const
+	??0MulDataPath@Alf@@QAE@XZ @ 8 NONAME ; Alf::MulDataPath::MulDataPath(void)
+	?Attributes@MulVisualItem@Alf@@QBE?BV?$vector@W4TVisualAttribute@mulvisualitem@Alf@@V?$allocator@W4TVisualAttribute@mulvisualitem@Alf@@@std@@@std@@XZ @ 9 NONAME ; class std::vector<enum Alf::mulvisualitem::TVisualAttribute, class std::allocator<enum Alf::mulvisualitem::TVisualAttribute> > const Alf::MulVisualItem::Attributes(void) const
+	?SetAttribute@MulVisualItem@Alf@@QAEXW4TVisualAttribute@mulvisualitem@2@PAVIMulVariantType@2@HW4TAttributeOwnership@12@@Z @ 10 NONAME ; void Alf::MulVisualItem::SetAttribute(enum Alf::mulvisualitem::TVisualAttribute, class Alf::IMulVariantType *, int, enum Alf::MulVisualItem::TAttributeOwnership)
+	?Depth@MulDataPath@Alf@@QBEHXZ @ 11 NONAME ; int Alf::MulDataPath::Depth(void) const
+	?SetAttribute@MulVisualItem@Alf@@QAEXW4TVisualAttribute@mulvisualitem@2@HH@Z @ 12 NONAME ; void Alf::MulVisualItem::SetAttribute(enum Alf::mulvisualitem::TVisualAttribute, int, int)
+	?SetAttribute@MulVisualItem@Alf@@QAEXW4TVisualAttribute@mulvisualitem@2@ABVTDesC16@@H@Z @ 13 NONAME ; void Alf::MulVisualItem::SetAttribute(enum Alf::mulvisualitem::TVisualAttribute, class TDesC16 const &, int)
+	??1MulVisualItem@Alf@@QAE@XZ @ 14 NONAME ; Alf::MulVisualItem::~MulVisualItem(void)
+	??1MulModelImpl@Alf@@UAE@XZ @ 15 NONAME ; Alf::MulModelImpl::~MulModelImpl(void)
+	??0MulDataPath@Alf@@QAE@HH@Z @ 16 NONAME ; Alf::MulDataPath::MulDataPath(int, int)
+	??AMulDataPath@Alf@@QBEHH@Z @ 17 NONAME ; int Alf::MulDataPath::operator[](int) const
+	??0MulVisualItem@Alf@@QAE@ABV01@@Z @ 18 NONAME ; Alf::MulVisualItem::MulVisualItem(class Alf::MulVisualItem const &)
+	??0MulVisualItem@Alf@@QAE@XZ @ 19 NONAME ; Alf::MulVisualItem::MulVisualItem(void)
+	?Append@MulDataPath@Alf@@QAEXH@Z @ 20 NONAME ; void Alf::MulDataPath::Append(int)
+	?AttributeAsString@MulVisualItem@Alf@@QBEABVTDesC16@@W4TVisualAttribute@mulvisualitem@2@@Z @ 21 NONAME ; class TDesC16 const & Alf::MulVisualItem::AttributeAsString(enum Alf::mulvisualitem::TVisualAttribute) const
+
