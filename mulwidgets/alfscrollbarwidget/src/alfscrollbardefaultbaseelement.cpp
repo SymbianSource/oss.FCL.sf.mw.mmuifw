@@ -1323,12 +1323,15 @@ void AlfScrollBarDefaultBaseElement::changeGraphics()
 // 
 bool AlfScrollBarDefaultBaseElement::isScrollbarTrackVisual(CAlfVisual *aVisual)
     {
-    if(aVisual == mData->mExtendedTrackLayout ||
-       aVisual == mData->mTrackTopImage ||
-       aVisual == mData->mTrackMiddleImage ||
-       aVisual == mData->mTrackEndImage)
+    if(aVisual)
         {
-        return true;
+        if(aVisual == mData->mExtendedTrackLayout ||
+                aVisual == mData->mTrackTopImage ||
+                aVisual == mData->mTrackMiddleImage ||
+                aVisual == mData->mTrackEndImage)
+                {
+                return true;
+                }
         }
      return false;   
     }  
@@ -1340,12 +1343,15 @@ bool AlfScrollBarDefaultBaseElement::isScrollbarTrackVisual(CAlfVisual *aVisual)
 // 
 bool AlfScrollBarDefaultBaseElement::isScrollbarThumbVisual(CAlfVisual *aVisual)
     {
-    if(aVisual == mData->mExtendedThumbLayout ||
-       aVisual == mData->mThumbTopImage ||
-       aVisual == mData->mThumbMiddleImage ||
-       aVisual == mData->mThumbEndImage)
+    if(aVisual)
         {
-        return true;
+        if(aVisual == mData->mExtendedThumbLayout ||
+                aVisual == mData->mThumbTopImage ||
+                aVisual == mData->mThumbMiddleImage ||
+                aVisual == mData->mThumbEndImage)
+                {
+                return true;
+                }
         }
      return false;   
     }  
