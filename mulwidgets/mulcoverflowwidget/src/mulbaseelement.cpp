@@ -1207,16 +1207,34 @@ void MulBaseElement::SetCounterText( int /*aTransitionTime*/ )
 		// done for performance improvement , no need to calculate 
 		// no of digits in highlight index and total model count.
     	auto_ptr<HBufC> countbuffer(HBufC::NewL (12)); 
+    	TPtr countPtr = countbuffer->Des();
       
         //settin value for counter text visual
         /// @bug critical:avanhata:7/7/2008 in arabic/hebrew the text should flow
         /// from right to left (totalCount / highlight) => the string format needs
         /// to come from a resource file, and use stringloader (and arabic indic number
         /// conversion if stringloader does not do it automatically)
-        countbuffer->Des().AppendNum(currHighlightIndex+1);
-        countbuffer->Des().Append(KSlash);
-        countbuffer->Des().AppendNum(totalModelCount);
-
+    	// mData->mIsMirrored, is updated once during coverflow launch
+    	// with the value, AknLayoutUtils::LayoutMirrored().
+    	// SInce there is no runtime language change, we can use this same
+    	// variable for checking mirroring
+    	if(mData->mIsMirrored)
+    	    {
+            // In arabic or any left to right languages even the counter should be
+            // displayed in reverse order.
+            // In english it is dispalyed as "1/20",in arabic it should be "20/1". 
+            countPtr.AppendNum(totalModelCount);
+            countPtr.Append(KSlash);
+            countPtr.AppendNum(currHighlightIndex+1);
+    	    }
+    	else
+    	    {
+            countPtr.AppendNum(currHighlightIndex+1);
+    	    countPtr.Append(KSlash);
+    	    countPtr.AppendNum(totalModelCount);
+    	    }    	
+        // Convert the numbers to currnet phone language
+        AknTextUtils::DisplayTextLanguageSpecificNumberConversion(countPtr);
         mData->mCounterVisual->SetTextL(*countbuffer);
     	}    
 	}
